@@ -1,0 +1,17 @@
+PODS:
+  - Kingfisher (3.2.4)
+  - Material (2.4.10):
+    - Material/Core (= 2.4.10)
+  - Material/Core (2.4.10)
+
+DEPENDENCIES:
+  - Kingfisher
+  - Material (~> 2.0)
+
+SPEC CHECKSUMS:
+  Kingfisher: 8d80f39da403cd9c9ee11984e1655f4d6a566cdb
+  Material: ef1e6da2e242d582205c87847a5346138894a633
+
+PODFILE CHECKSUM: f847825893d9a287902815a425af26618c722c60
+
+COCOAPODS: 1.1.1
