@@ -1,5 +1,5 @@
 //
-//  EcommerceRootViewController.swift
+//  TransitionedViewController.swift
 //  EcommerceApp
 //
 //  Created by Florian Marcu on 1/21/17.
@@ -9,22 +9,22 @@
 import UIKit
 import Material
 
-class EcommerceRootViewController: UIViewController {
+class EcommerceCartViewController: UIViewController {
     open override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Color.grey.lighten5
+        view.backgroundColor = Color.purple.base
 
         prepareToolbar()
     }
 }
 
-extension EcommerceRootViewController {
+extension EcommerceCartViewController {
     fileprivate func prepareToolbar() {
         guard let tc = toolbarController else {
             return
         }
 
-        tc.toolbar.title = "Material"
-        tc.toolbar.detail = "Build Beautiful Software"
+        tc.toolbar.title = "Transitioned"
+        tc.toolbar.detail = "View Controller"
     }
 }

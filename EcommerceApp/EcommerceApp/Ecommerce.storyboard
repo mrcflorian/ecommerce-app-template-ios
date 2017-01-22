@@ -1,7 +1,132 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Ecommerce Menu View Controller-->
+        <scene sceneID="fKH-8E-163">
+            <objects>
+                <viewController storyboardIdentifier="EcommerceMenuViewController" id="kVm-47-tux" customClass="EcommerceMenuViewController" customModule="EcommerceApp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i1F-wJ-aMM"/>
+                        <viewControllerLayoutGuide type="bottom" id="L3d-lV-sCp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="J09-Iu-RjO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jessica Smith" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBK-dP-ruB" userLabel="Username Label">
+                                <rect key="frame" x="0.0" y="178" width="375" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Uhe-OX-8Bx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jU9-A0-lHr" customClass="IconButton" customModule="Material">
+                                <rect key="frame" x="152" y="90" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="fUZ-F6-Luq"/>
+                                    <constraint firstAttribute="height" constant="70" id="gvh-KN-Mir"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s0Q-wD-fqJ" userLabel="Menu Container View">
+                                <rect key="frame" x="0.0" y="238.5" width="375" height="315.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mz3-RU-PxO" customClass="MenuButton" customModule="EcommerceApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.5" y="0.0" width="375" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="kZX-bE-oKz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="18"/>
+                                        <state key="normal" title="Shop" image="shop-menu-icon">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrk-AM-Hnw" userLabel="Cart Button" customClass="MenuButton" customModule="EcommerceApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="40" width="375" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="nsy-Zr-sv0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="18"/>
+                                        <state key="normal" title="Cart" image="shopping-cart-menu-item"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10W-Lr-Fk6" customClass="MenuButton" customModule="EcommerceApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.5" y="80" width="375" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Zrh-cQ-v5V"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="18"/>
+                                        <state key="normal" title="Settings" image="settings-menu-item">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kr4-Ig-wyQ" customClass="MenuButton" customModule="EcommerceApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="120" width="375" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="I6v-uE-hHH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="18"/>
+                                        <state key="normal" title="Log out" image="logout-menu-item"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="10W-Lr-Fk6" firstAttribute="top" secondItem="lrk-AM-Hnw" secondAttribute="bottom" id="6Tq-bj-fQ8"/>
+                                    <constraint firstItem="lrk-AM-Hnw" firstAttribute="width" secondItem="s0Q-wD-fqJ" secondAttribute="width" id="7t9-Yz-hNy"/>
+                                    <constraint firstItem="Kr4-Ig-wyQ" firstAttribute="top" secondItem="10W-Lr-Fk6" secondAttribute="bottom" id="Dqc-RK-AXH"/>
+                                    <constraint firstItem="Kr4-Ig-wyQ" firstAttribute="width" secondItem="s0Q-wD-fqJ" secondAttribute="width" id="Lgu-A2-8bS"/>
+                                    <constraint firstItem="10W-Lr-Fk6" firstAttribute="width" secondItem="s0Q-wD-fqJ" secondAttribute="width" id="NAO-jp-lA8"/>
+                                    <constraint firstItem="Kr4-Ig-wyQ" firstAttribute="centerX" secondItem="s0Q-wD-fqJ" secondAttribute="centerX" id="P0m-sb-sj8"/>
+                                    <constraint firstItem="mz3-RU-PxO" firstAttribute="top" secondItem="s0Q-wD-fqJ" secondAttribute="top" id="Sxe-RY-fVn"/>
+                                    <constraint firstItem="10W-Lr-Fk6" firstAttribute="centerX" secondItem="s0Q-wD-fqJ" secondAttribute="centerX" id="Ysf-sx-MLo"/>
+                                    <constraint firstItem="mz3-RU-PxO" firstAttribute="width" secondItem="s0Q-wD-fqJ" secondAttribute="width" id="noh-yq-qdD"/>
+                                    <constraint firstItem="lrk-AM-Hnw" firstAttribute="top" secondItem="mz3-RU-PxO" secondAttribute="bottom" id="tkc-dO-lpa"/>
+                                    <constraint firstItem="mz3-RU-PxO" firstAttribute="centerX" secondItem="s0Q-wD-fqJ" secondAttribute="centerX" id="xAL-gh-rHV"/>
+                                    <constraint firstItem="lrk-AM-Hnw" firstAttribute="centerX" secondItem="s0Q-wD-fqJ" secondAttribute="centerX" id="xAP-ac-6nl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="s0Q-wD-fqJ" firstAttribute="top" secondItem="hBK-dP-ruB" secondAttribute="bottom" multiplier="1.1" constant="20" id="7iX-kw-0Hw"/>
+                            <constraint firstItem="s0Q-wD-fqJ" firstAttribute="width" secondItem="J09-Iu-RjO" secondAttribute="width" id="91b-GT-fyg"/>
+                            <constraint firstItem="jU9-A0-lHr" firstAttribute="top" secondItem="i1F-wJ-aMM" secondAttribute="bottom" multiplier="4" constant="10" id="ZlY-at-Js6"/>
+                            <constraint firstItem="hBK-dP-ruB" firstAttribute="width" secondItem="J09-Iu-RjO" secondAttribute="width" id="axl-VL-QQD"/>
+                            <constraint firstItem="L3d-lV-sCp" firstAttribute="top" secondItem="s0Q-wD-fqJ" secondAttribute="bottom" constant="113" id="jhZ-qF-gax"/>
+                            <constraint firstItem="s0Q-wD-fqJ" firstAttribute="centerX" secondItem="J09-Iu-RjO" secondAttribute="centerX" id="pNl-zm-1GX"/>
+                            <constraint firstItem="jU9-A0-lHr" firstAttribute="centerX" secondItem="J09-Iu-RjO" secondAttribute="centerX" id="rYJ-4p-lRi"/>
+                            <constraint firstItem="hBK-dP-ruB" firstAttribute="top" secondItem="jU9-A0-lHr" secondAttribute="bottom" multiplier="1.05" constant="10" id="uLK-0W-rsE"/>
+                            <constraint firstItem="hBK-dP-ruB" firstAttribute="centerX" secondItem="J09-Iu-RjO" secondAttribute="centerX" id="xjI-7b-UqY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="avatarButton" destination="jU9-A0-lHr" id="mcs-PR-xi6"/>
+                        <outlet property="cartMenuButton" destination="lrk-AM-Hnw" id="yJ4-Um-KNr"/>
+                        <outlet property="logoutMenuButton" destination="Kr4-Ig-wyQ" id="Bfx-qN-qTx"/>
+                        <outlet property="settingsMenuButton" destination="10W-Lr-Fk6" id="7Bo-mJ-eLn"/>
+                        <outlet property="shopMenuButton" destination="mz3-RU-PxO" id="9Oh-9l-lxG"/>
+                        <outlet property="userNameLabel" destination="hBK-dP-ruB" id="AqF-eg-Zpd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="69c-c0-q4B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-186.40000000000001" y="-31.03448275862069"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logout-menu-item" width="25" height="25"/>
+        <image name="settings-menu-item" width="25" height="25"/>
+        <image name="shop-menu-icon" width="25" height="25"/>
+        <image name="shopping-cart-menu-item" width="25" height="25"/>
+    </resources>
 </document>

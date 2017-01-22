@@ -1,30 +1,29 @@
 //
-//  TransitionedViewController.swift
+//  EcommerceRootViewController.swift
 //  EcommerceApp
 //
 //  Created by Florian Marcu on 1/21/17.
 //  Copyright © 2017 iOS App Templates. All rights reserved.
 //
 
-import UIKit
 import Material
+import UIKit
 
-class TransitionedViewController: UIViewController {
+class EcommerceHomeViewController: UIViewController {
     open override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Color.purple.base
+        view.backgroundColor = Color.grey.lighten5
 
         prepareToolbar()
     }
 }
 
-extension TransitionedViewController {
+extension EcommerceHomeViewController {
     fileprivate func prepareToolbar() {
         guard let tc = toolbarController else {
             return
         }
 
-        tc.toolbar.title = "Transitioned"
-        tc.toolbar.detail = "View Controller"
+        tc.toolbar.title = "Shop"
     }
 }

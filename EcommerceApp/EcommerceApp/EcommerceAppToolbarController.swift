@@ -11,13 +11,11 @@ import Material
 
 class EcommerceAppToolbarController: ToolbarController {
     fileprivate var menuButton: IconButton!
-    fileprivate var switchControl: Switch!
-    fileprivate var moreButton: IconButton!
+    fileprivate var searchButton: IconButton!
 
     override func prepare() {
         super.prepare()
         prepareMenuButton()
-        prepareSwitch()
         prepareMoreButton()
         prepareStatusBar()
         prepareToolbar()
@@ -30,13 +28,9 @@ extension EcommerceAppToolbarController {
         menuButton.addTarget(self, action: #selector(handleMenuButton), for: .touchUpInside)
     }
 
-    fileprivate func prepareSwitch() {
-        switchControl = Switch(state: .off, style: .light, size: .small)
-    }
-
     fileprivate func prepareMoreButton() {
-        moreButton = IconButton(image: Icon.cm.moreVertical)
-        moreButton.addTarget(self, action: #selector(handleMoreButton), for: .touchUpInside)
+        searchButton = IconButton(image: Icon.cm.search)
+        searchButton.addTarget(self, action: #selector(handleSearchButton), for: .touchUpInside)
     }
 
     fileprivate func prepareStatusBar() {
@@ -48,7 +42,7 @@ extension EcommerceAppToolbarController {
 
     fileprivate func prepareToolbar() {
         toolbar.leftViews = [menuButton]
-        toolbar.rightViews = [switchControl, moreButton]
+        toolbar.rightViews = [searchButton]
     }
 }
 
@@ -59,7 +53,7 @@ extension EcommerceAppToolbarController {
     }
 
     @objc
-    fileprivate func handleMoreButton() {
+    fileprivate func handleSearchButton() {
         navigationDrawerController?.toggleRightView()
     }
 }

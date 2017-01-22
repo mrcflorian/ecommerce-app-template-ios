@@ -15,11 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func applicationDidFinishLaunching(_ application: UIApplication) {
-        let appToolbarController = EcommerceAppToolbarController(rootViewController: EcommerceRootViewController())
-        let leftViewController = LeftViewController()
+        let appToolbarController = EcommerceAppToolbarController(rootViewController: EcommerceHomeViewController())
+        let menuViewController = StoryboardEntityProvider().ecommerceMenuViewController()
 
         window = UIWindow(frame: Screen.bounds)
-        window!.rootViewController = EcommerceAppNavigationDrawerController(rootViewController: appToolbarController, leftViewController: leftViewController, rightViewController: nil)
+        window!.rootViewController = EcommerceAppNavigationDrawerController(rootViewController: appToolbarController, leftViewController: menuViewController, rightViewController: nil)
         window!.makeKeyAndVisible()
     }
 }
