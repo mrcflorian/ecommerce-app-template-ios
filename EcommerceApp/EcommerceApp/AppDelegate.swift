@@ -16,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidFinishLaunching(_ application: UIApplication) {
         let homeVC = StoryboardEntityProvider().ecommerceProductCollectionVC()
-        homeVC.products = Product.mockProducts()
         homeVC.screenTitle = "Shop"
 
         let appToolbarController = EcommerceAppToolbarController(rootViewController: homeVC)
@@ -25,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: Screen.bounds)
         window!.rootViewController = EcommerceAppNavigationDrawerController(rootViewController: appToolbarController, leftViewController: menuViewController, rightViewController: nil)
         window!.makeKeyAndVisible()
+
+        homeVC.products = Product.mockProducts()
     }
 }
 

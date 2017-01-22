@@ -25,7 +25,7 @@ class EcommerceProductCollectionViewController: UICollectionViewController {
         guard let tc = toolbarController else {
             return
         }
-        tc.toolbar.title = title
+        tc.toolbar.title = screenTitle
     }
 
     override func viewDidLayoutSubviews() {
