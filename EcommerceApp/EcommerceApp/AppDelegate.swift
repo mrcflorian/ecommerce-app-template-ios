@@ -15,7 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func applicationDidFinishLaunching(_ application: UIApplication) {
-        let appToolbarController = EcommerceAppToolbarController(rootViewController: EcommerceHomeViewController())
+        let homeVC = StoryboardEntityProvider().ecommerceProductCollectionVC()
+        homeVC.products = Product.mockProducts()
+        homeVC.screenTitle = "Shop"
+
+        let appToolbarController = EcommerceAppToolbarController(rootViewController: homeVC)
         let menuViewController = StoryboardEntityProvider().ecommerceMenuViewController()
 
         window = UIWindow(frame: Screen.bounds)

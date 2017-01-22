@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1767F7591E344B7100E8AD1F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1767F7581E344B7100E8AD1F /* Product.swift */; };
+		1767F75B1E344E3100E8AD1F /* EcommerceProductCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1767F75A1E344E3100E8AD1F /* EcommerceProductCollectionViewController.swift */; };
+		1767F75D1E344E7800E8AD1F /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1767F75C1E344E7800E8AD1F /* ProductCollectionViewCell.swift */; };
 		177867461E33F86000BF7080 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177867451E33F86000BF7080 /* AppDelegate.swift */; };
 		177867481E33F86000BF7080 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177867471E33F86000BF7080 /* ViewController.swift */; };
 		1778674B1E33F86000BF7080 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 177867491E33F86000BF7080 /* Main.storyboard */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1767F7581E344B7100E8AD1F /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		1767F75A1E344E3100E8AD1F /* EcommerceProductCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcommerceProductCollectionViewController.swift; sourceTree = "<group>"; };
+		1767F75C1E344E7800E8AD1F /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		177867421E33F86000BF7080 /* EcommerceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcommerceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		177867451E33F86000BF7080 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		177867471E33F86000BF7080 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1767F7571E344B5000E8AD1F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1767F7581E344B7100E8AD1F /* Product.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		177867391E33F86000BF7080 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +89,7 @@
 		177867441E33F86000BF7080 /* EcommerceApp */ = {
 			isa = PBXGroup;
 			children = (
+				1767F7571E344B5000E8AD1F /* Models */,
 				177867451E33F86000BF7080 /* AppDelegate.swift */,
 				177867471E33F86000BF7080 /* ViewController.swift */,
 				177867491E33F86000BF7080 /* Main.storyboard */,
@@ -88,6 +103,8 @@
 				1778675F1E33FBC800BF7080 /* EcommerceCartViewController.swift */,
 				177867611E33FC2400BF7080 /* EcommerceAppToolbarController.swift */,
 				177867631E34147900BF7080 /* StoryboardEntityProvider.swift */,
+				1767F75A1E344E3100E8AD1F /* EcommerceProductCollectionViewController.swift */,
+				1767F75C1E344E7800E8AD1F /* ProductCollectionViewCell.swift */,
 			);
 			path = EcommerceApp;
 			sourceTree = "<group>";
@@ -236,8 +253,11 @@
 			files = (
 				177867601E33FBC800BF7080 /* EcommerceCartViewController.swift in Sources */,
 				177867621E33FC2400BF7080 /* EcommerceAppToolbarController.swift in Sources */,
+				1767F75D1E344E7800E8AD1F /* ProductCollectionViewCell.swift in Sources */,
+				1767F7591E344B7100E8AD1F /* Product.swift in Sources */,
 				177867641E34147900BF7080 /* StoryboardEntityProvider.swift in Sources */,
 				177867481E33F86000BF7080 /* ViewController.swift in Sources */,
+				1767F75B1E344E3100E8AD1F /* EcommerceProductCollectionViewController.swift in Sources */,
 				1778675C1E33FB3900BF7080 /* EcommerceHomeViewController.swift in Sources */,
 				177867461E33F86000BF7080 /* AppDelegate.swift in Sources */,
 				1778675E1E33FBA500BF7080 /* EcommerceMenuViewController.swift in Sources */,
@@ -307,7 +327,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -351,7 +371,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

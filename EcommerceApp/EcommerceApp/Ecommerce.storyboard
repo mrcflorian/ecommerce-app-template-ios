@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -121,6 +122,98 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="69c-c0-q4B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-186.40000000000001" y="-31.03448275862069"/>
+        </scene>
+        <!--Ecommerce Product Collection View Controller-->
+        <scene sceneID="bGO-bK-n9u">
+            <objects>
+                <collectionViewController storyboardIdentifier="EcommerceProductCollectionViewController" id="ePv-J6-Lxg" customClass="EcommerceProductCollectionViewController" customModule="EcommerceApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="Ebi-PV-n9W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="30" minimumInteritemSpacing="30" id="B7V-IU-6oY">
+                            <size key="itemSize" width="142" height="216"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="30" minY="30" maxX="30" maxY="30"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCollectionViewCell" id="SQf-Ez-vd8" customClass="ProductCollectionViewCell" customModule="EcommerceApp" customModuleProvider="target">
+                                <rect key="frame" x="30" y="30" width="142" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="142" height="216"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mOJ-e9-Jb6">
+                                            <rect key="frame" x="0.0" y="8" width="142" height="151"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skull with snake" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDB-7z-u79">
+                                            <rect key="frame" x="15" y="165" width="127" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="19.5" id="Vrt-H6-MBh"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="$45" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqa-dJ-YXx">
+                                            <rect key="frame" x="81" y="190" width="48" height="17"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T-Shirt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74B-sG-AX9">
+                                            <rect key="frame" x="15" y="190" width="42" height="17"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="17" id="xEf-NC-e9b"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="74B-sG-AX9" firstAttribute="leading" secondItem="SQf-Ez-vd8" secondAttribute="leadingMargin" constant="7" id="8D5-Hg-KKh"/>
+                                    <constraint firstItem="mOJ-e9-Jb6" firstAttribute="height" secondItem="SQf-Ez-vd8" secondAttribute="height" multiplier="0.7" id="AOk-o2-giu"/>
+                                    <constraint firstItem="mOJ-e9-Jb6" firstAttribute="width" secondItem="SQf-Ez-vd8" secondAttribute="width" id="EUC-K6-F66"/>
+                                    <constraint firstItem="mOJ-e9-Jb6" firstAttribute="centerX" secondItem="SQf-Ez-vd8" secondAttribute="centerX" id="Hvz-7u-gTd"/>
+                                    <constraint firstItem="VDB-7z-u79" firstAttribute="leading" secondItem="SQf-Ez-vd8" secondAttribute="leadingMargin" constant="7" id="R8J-Os-ZAB"/>
+                                    <constraint firstItem="mOJ-e9-Jb6" firstAttribute="top" secondItem="SQf-Ez-vd8" secondAttribute="topMargin" id="Rri-GE-KcI"/>
+                                    <constraint firstItem="74B-sG-AX9" firstAttribute="top" secondItem="VDB-7z-u79" secondAttribute="bottom" constant="5" id="Rx9-R1-dvb"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="VDB-7z-u79" secondAttribute="trailing" constant="-8" id="aB7-gn-PMN"/>
+                                    <constraint firstItem="VDB-7z-u79" firstAttribute="top" secondItem="mOJ-e9-Jb6" secondAttribute="bottom" constant="6" id="gfp-xe-fzk"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="gqa-dJ-YXx" secondAttribute="trailing" constant="5" id="sHE-jc-DvX"/>
+                                    <constraint firstItem="gqa-dJ-YXx" firstAttribute="leading" secondItem="74B-sG-AX9" secondAttribute="trailing" constant="24.5" id="z00-B9-swj"/>
+                                    <constraint firstItem="gqa-dJ-YXx" firstAttribute="top" secondItem="VDB-7z-u79" secondAttribute="bottom" constant="5" id="z7S-hr-8to"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="productCategoryLabel" destination="74B-sG-AX9" id="cGO-Va-47K"/>
+                                    <outlet property="productImageView" destination="mOJ-e9-Jb6" id="8OJ-FX-Tmi"/>
+                                    <outlet property="productPriceLabel" destination="gqa-dJ-YXx" id="j8v-t2-Qga"/>
+                                    <outlet property="productTitleLabel" destination="VDB-7z-u79" id="Jj6-gb-OLb"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="ePv-J6-Lxg" id="gKI-0X-PWq"/>
+                            <outlet property="delegate" destination="ePv-J6-Lxg" id="UwV-AC-whP"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ACK-qD-EDV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="752.79999999999995" y="-42.728635682158924"/>
         </scene>
     </scenes>
     <resources>
