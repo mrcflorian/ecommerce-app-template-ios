@@ -62,6 +62,13 @@ class EcommerceProductCollectionViewController: UICollectionViewController {
         return cell
     }
 
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailsVC = StoryboardEntityProvider().ecommerceProductDetailsVC()
+        detailsVC.product = products[indexPath.row]
+
+        (navigationDrawerController?.rootViewController as? ToolbarController)?.transition(to: detailsVC, completion: nil)
+    }
+
     // MARK: UICollectionViewDelegate
 
     /*

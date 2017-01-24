@@ -22,6 +22,8 @@
 		177867601E33FBC800BF7080 /* EcommerceCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1778675F1E33FBC800BF7080 /* EcommerceCartViewController.swift */; };
 		177867621E33FC2400BF7080 /* EcommerceAppToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177867611E33FC2400BF7080 /* EcommerceAppToolbarController.swift */; };
 		177867641E34147900BF7080 /* StoryboardEntityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177867631E34147900BF7080 /* StoryboardEntityProvider.swift */; };
+		17825D8E1E356BF200A03FC5 /* EcommerceProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17825D8D1E356BF200A03FC5 /* EcommerceProductDetailsViewController.swift */; };
+		17825D901E356ED200A03FC5 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17825D8F1E356ED200A03FC5 /* ImageCollectionViewCell.swift */; };
 		3C080925C4927DE51FF202F6 /* Pods_EcommerceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A77003E3BA55AED5BB62B93B /* Pods_EcommerceApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		1778675F1E33FBC800BF7080 /* EcommerceCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcommerceCartViewController.swift; sourceTree = "<group>"; };
 		177867611E33FC2400BF7080 /* EcommerceAppToolbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcommerceAppToolbarController.swift; sourceTree = "<group>"; };
 		177867631E34147900BF7080 /* StoryboardEntityProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardEntityProvider.swift; sourceTree = "<group>"; };
+		17825D8D1E356BF200A03FC5 /* EcommerceProductDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcommerceProductDetailsViewController.swift; sourceTree = "<group>"; };
+		17825D8F1E356ED200A03FC5 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		1EA0814B1EFE100BECD440B2 /* Pods-EcommerceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcommerceApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EcommerceApp/Pods-EcommerceApp.debug.xcconfig"; sourceTree = "<group>"; };
 		84C4903F70CB6CB03F788679 /* Pods-EcommerceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcommerceApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-EcommerceApp/Pods-EcommerceApp.release.xcconfig"; sourceTree = "<group>"; };
 		A77003E3BA55AED5BB62B93B /* Pods_EcommerceApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EcommerceApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +109,8 @@
 				177867631E34147900BF7080 /* StoryboardEntityProvider.swift */,
 				1767F75A1E344E3100E8AD1F /* EcommerceProductCollectionViewController.swift */,
 				1767F75C1E344E7800E8AD1F /* ProductCollectionViewCell.swift */,
+				17825D8D1E356BF200A03FC5 /* EcommerceProductDetailsViewController.swift */,
+				17825D8F1E356ED200A03FC5 /* ImageCollectionViewCell.swift */,
 			);
 			path = EcommerceApp;
 			sourceTree = "<group>";
@@ -253,8 +259,10 @@
 			files = (
 				177867601E33FBC800BF7080 /* EcommerceCartViewController.swift in Sources */,
 				177867621E33FC2400BF7080 /* EcommerceAppToolbarController.swift in Sources */,
+				17825D901E356ED200A03FC5 /* ImageCollectionViewCell.swift in Sources */,
 				1767F75D1E344E7800E8AD1F /* ProductCollectionViewCell.swift in Sources */,
 				1767F7591E344B7100E8AD1F /* Product.swift in Sources */,
+				17825D8E1E356BF200A03FC5 /* EcommerceProductDetailsViewController.swift in Sources */,
 				177867641E34147900BF7080 /* StoryboardEntityProvider.swift in Sources */,
 				177867481E33F86000BF7080 /* ViewController.swift in Sources */,
 				1767F75B1E344E3100E8AD1F /* EcommerceProductCollectionViewController.swift in Sources */,
