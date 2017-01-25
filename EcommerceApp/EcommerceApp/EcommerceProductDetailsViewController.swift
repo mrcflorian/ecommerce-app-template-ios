@@ -6,6 +6,7 @@
 //  Copyright © 2017 iOS App Templates. All rights reserved.
 //
 
+import Material
 import UIKit
 
 private let reuseIdentifier = "ImageCollectionViewCell"
@@ -19,6 +20,9 @@ class EcommerceProductDetailsViewController: UIViewController {
 
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var pageControl: UIPageControl!
+    @IBOutlet var detailsTextView: UITextView!
+
+    @IBOutlet var addToCartButton: RaisedButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +30,31 @@ class EcommerceProductDetailsViewController: UIViewController {
         if let images = product?.productImages {
             pageControl.numberOfPages = images.count
         }
+
+        addToCartButton.addTarget(self, action: #selector(handleAddToCartButton), for: .touchUpInside)
+        addToCartButton.pulseColor = .white
+        addToCartButton.backgroundColor = Color.green.base
+        addToCartButton.titleColor = .white
+        addToCartButton.layer.cornerRadius = 20
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        self.detailsTextView.text = product?.productDescription
+
+        let contentSize = self.detailsTextView.sizeThatFits(self.detailsTextView.bounds.size)
+        var frame = self.detailsTextView.frame
+        frame.size.height = contentSize.height
+        self.detailsTextView.frame = frame
+
+        let aspectRatioTextViewConstraint = NSLayoutConstraint(item: self.detailsTextView, attribute: .height, relatedBy: .equal, toItem: self.detailsTextView, attribute: .width, multiplier: detailsTextView.bounds.height/detailsTextView.bounds.width, constant: 1)
+        self.detailsTextView.addConstraint(aspectRatioTextViewConstraint)
+    }
+
+    @objc
+    fileprivate func handleAddToCartButton() {
+
     }
 }
 
