@@ -32,7 +32,7 @@ class Product {
             "https://everlane-2.imgix.net/i/891f0d01_2238.jpg?w=576&h=576&q=65&dpr=1"
         ]
 
-        let description = "To these in the morning, I sent the captain, who was to enter into a parley with them. In a word, to try them and tell me wheather they might be trusted or not to go on board and surprise the ship"
+        let description = "To these in the morning, I sent the captain, who was to enter into a parley with them. In a word, to try them and tell me wheather they might be trusted or not to go on board and surprise the ship."
         return [
             Product(name: "Saturn", imageUrl: "https://slimages.macysassets.com/is/image/MCY/products/9/optimized/3079009_fpx.tif?bgc=255,255,255&wid=224&qlt=90,0&layer=comp&op_sharpen=0&resMode=bicub&op_usm=0.7,1.0,0.5,0&fmt=jpeg", price: 45.0, description: description, category: "T-Shirt", images: images),
             Product(name: "V-Neck Pima", imageUrl: "https://slimages.macysassets.com/is/image/MCY/products/4/optimized/3718994_fpx.tif?bgc=255,255,255&wid=224&qlt=90,0&layer=comp&op_sharpen=0&resMode=bicub&op_usm=0.7,1.0,0.5,0&fmt=jpeg", price: 99, description: description, category: "T-Shirt", images: images),

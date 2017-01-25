@@ -234,7 +234,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gl3-jj-ZkN" userLabel="Carousel Container View">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="380"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="370"/>
                                                 <subviews>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9OM-uO-t2D">
                                                         <rect key="frame" x="63" y="0.0" width="250" height="330"/>
@@ -296,47 +296,47 @@
                                                     <constraint firstItem="9OM-uO-t2D" firstAttribute="centerX" secondItem="gl3-jj-ZkN" secondAttribute="centerX" id="2ic-kq-K4n"/>
                                                     <constraint firstItem="7xH-xz-gFK" firstAttribute="centerX" secondItem="gl3-jj-ZkN" secondAttribute="centerX" id="L4m-KT-ZXd"/>
                                                     <constraint firstItem="9OM-uO-t2D" firstAttribute="top" secondItem="gl3-jj-ZkN" secondAttribute="top" id="UIF-N9-xzp"/>
-                                                    <constraint firstAttribute="height" constant="380" id="mrF-vX-bNw"/>
+                                                    <constraint firstAttribute="height" constant="370" id="mrF-vX-bNw"/>
                                                 </constraints>
                                             </view>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XfW-SB-x6k">
+                                                <rect key="frame" x="0.0" y="370" width="375" height="158"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="158" placeholder="YES" id="x14-Um-Rtu"/>
+                                                </constraints>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMa-CI-YAO" customClass="RaisedButton" customModule="Material">
+                                                <rect key="frame" x="123" y="547" width="130" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="RFU-7A-9Oi"/>
+                                                    <constraint firstAttribute="height" constant="40" id="h07-GL-5Cg"/>
+                                                </constraints>
+                                                <state key="normal" title="ADD TO CART"/>
+                                            </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="gl3-jj-ZkN" firstAttribute="top" secondItem="Dcb-Og-h1D" secondAttribute="top" id="04B-1Y-0zf"/>
+                                            <constraint firstItem="XfW-SB-x6k" firstAttribute="top" secondItem="gl3-jj-ZkN" secondAttribute="bottom" id="3qZ-lF-ye2"/>
                                             <constraint firstAttribute="height" constant="1200" id="J03-kj-EOD"/>
+                                            <constraint firstItem="XfW-SB-x6k" firstAttribute="centerX" secondItem="Dcb-Og-h1D" secondAttribute="centerX" id="M0p-Eb-fVX"/>
+                                            <constraint firstItem="XfW-SB-x6k" firstAttribute="width" secondItem="Dcb-Og-h1D" secondAttribute="width" id="d0c-nt-Aul"/>
+                                            <constraint firstItem="EMa-CI-YAO" firstAttribute="top" secondItem="XfW-SB-x6k" secondAttribute="bottom" constant="19" id="gEJ-hB-qZz"/>
                                             <constraint firstItem="gl3-jj-ZkN" firstAttribute="centerX" secondItem="Dcb-Og-h1D" secondAttribute="centerX" id="n6t-dJ-xX5"/>
                                             <constraint firstItem="gl3-jj-ZkN" firstAttribute="width" secondItem="Dcb-Og-h1D" secondAttribute="width" id="oXo-fm-dV0"/>
+                                            <constraint firstItem="EMa-CI-YAO" firstAttribute="centerX" secondItem="Dcb-Og-h1D" secondAttribute="centerX" id="qBv-Js-PXc"/>
                                         </constraints>
                                     </view>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XfW-SB-x6k">
-                                        <rect key="frame" x="0.0" y="399" width="375" height="158"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="158" placeholder="YES" id="x14-Um-Rtu"/>
-                                        </constraints>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMa-CI-YAO" customClass="RaisedButton" customModule="Material">
-                                        <rect key="frame" x="122.5" y="585" width="130" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="130" id="RFU-7A-9Oi"/>
-                                            <constraint firstAttribute="height" constant="40" id="h07-GL-5Cg"/>
-                                        </constraints>
-                                        <state key="normal" title="ADD TO CART"/>
-                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="XfW-SB-x6k" firstAttribute="width" secondItem="Dcb-Og-h1D" secondAttribute="width" id="0hd-W7-t4e"/>
-                                    <constraint firstItem="EMa-CI-YAO" firstAttribute="centerX" secondItem="Dcb-Og-h1D" secondAttribute="centerX" id="0xl-Gu-dns"/>
                                     <constraint firstItem="Dcb-Og-h1D" firstAttribute="centerX" secondItem="KIi-SS-dqW" secondAttribute="centerX" id="2Fb-9e-NYe"/>
                                     <constraint firstItem="Dcb-Og-h1D" firstAttribute="leading" secondItem="KIi-SS-dqW" secondAttribute="leading" id="HM3-d7-VG7"/>
-                                    <constraint firstItem="EMa-CI-YAO" firstAttribute="top" secondItem="XfW-SB-x6k" secondAttribute="bottom" constant="28" id="LtH-Jf-Wnl"/>
                                     <constraint firstAttribute="trailing" secondItem="Dcb-Og-h1D" secondAttribute="trailing" id="RIS-bt-TYI"/>
-                                    <constraint firstItem="XfW-SB-x6k" firstAttribute="centerX" secondItem="Dcb-Og-h1D" secondAttribute="centerX" id="VE1-Gj-b9k"/>
                                     <constraint firstAttribute="bottom" secondItem="Dcb-Og-h1D" secondAttribute="bottom" id="VKv-35-fzK"/>
-                                    <constraint firstItem="XfW-SB-x6k" firstAttribute="top" secondItem="gl3-jj-ZkN" secondAttribute="bottom" constant="19" id="o27-rc-6c5"/>
                                     <constraint firstItem="Dcb-Og-h1D" firstAttribute="top" secondItem="KIi-SS-dqW" secondAttribute="top" id="q0T-JN-af9"/>
                                 </constraints>
                             </scrollView>
@@ -351,13 +351,15 @@
                     <connections>
                         <outlet property="addToCartButton" destination="EMa-CI-YAO" id="KOU-w9-Vo3"/>
                         <outlet property="collectionView" destination="9OM-uO-t2D" id="tCM-re-cnc"/>
+                        <outlet property="contentView" destination="Dcb-Og-h1D" id="8nd-vn-nFH"/>
+                        <outlet property="contentViewHeightConstraint" destination="J03-kj-EOD" id="0nV-WJ-pGm"/>
                         <outlet property="detailsTextView" destination="XfW-SB-x6k" id="xIm-qU-uHB"/>
                         <outlet property="pageControl" destination="7xH-xz-gFK" id="bZ0-Of-RtD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rSq-nO-3iQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1693.5999999999999" y="-42.728635682158924"/>
+            <point key="canvasLocation" x="1693.5999999999999" y="45.42728635682159"/>
         </scene>
     </scenes>
     <resources>

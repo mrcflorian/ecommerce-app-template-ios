@@ -21,8 +21,11 @@ class EcommerceProductDetailsViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var pageControl: UIPageControl!
     @IBOutlet var detailsTextView: UITextView!
-
     @IBOutlet var addToCartButton: RaisedButton!
+    @IBOutlet var contentView: UIView!
+
+    
+    @IBOutlet var contentViewHeightConstraint: NSLayoutConstraint!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +39,8 @@ class EcommerceProductDetailsViewController: UIViewController {
         addToCartButton.backgroundColor = Color.green.base
         addToCartButton.titleColor = .white
         addToCartButton.layer.cornerRadius = 20
+
+        updateContentViewHeight()
     }
 
     override func viewDidLayoutSubviews() {
@@ -48,13 +53,21 @@ class EcommerceProductDetailsViewController: UIViewController {
         frame.size.height = contentSize.height
         self.detailsTextView.frame = frame
 
-        let aspectRatioTextViewConstraint = NSLayoutConstraint(item: self.detailsTextView, attribute: .height, relatedBy: .equal, toItem: self.detailsTextView, attribute: .width, multiplier: detailsTextView.bounds.height/detailsTextView.bounds.width, constant: 1)
-        self.detailsTextView.addConstraint(aspectRatioTextViewConstraint)
+        updateContentViewHeight()
     }
 
     @objc
     fileprivate func handleAddToCartButton() {
 
+    }
+
+    fileprivate func updateContentViewHeight() {
+        let orientation = UIDevice.current.orientation
+        let constant: CGFloat = self.detailsTextView.frame.size.height + ((orientation == .portrait) ? 550 : 450)
+        if contentViewHeightConstraint.constant != constant {
+            contentViewHeightConstraint.constant = constant
+            self.contentView.setNeedsLayout()
+        }
     }
 }
 
