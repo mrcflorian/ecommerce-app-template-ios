@@ -18,6 +18,8 @@ class EcommerceProductDetailsViewController: UIViewController {
         }
     }
 
+    fileprivate var backButton: IconButton?
+
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var pageControl: UIPageControl!
     @IBOutlet var detailsTextView: UITextView!
@@ -41,6 +43,7 @@ class EcommerceProductDetailsViewController: UIViewController {
         addToCartButton.layer.cornerRadius = 20
 
         updateContentViewHeight()
+        prepareNavigationItem()
     }
 
     override func viewDidLayoutSubviews() {
@@ -68,6 +71,18 @@ class EcommerceProductDetailsViewController: UIViewController {
             contentViewHeightConstraint.constant = constant
             self.contentView.setNeedsLayout()
         }
+    }
+
+    fileprivate func prepareNavigationItem() {
+        let backButton = IconButton(image: Icon.cm.arrowBack)
+        backButton.addTarget(self, action: #selector(didTapBackButton), for: .touchUpInside)
+        navigationItem.title = product?.productName
+        navigationItem.leftViews = [backButton]
+    }
+
+    @objc
+    fileprivate func didTapBackButton() {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 

@@ -42,6 +42,8 @@ class EcommerceMenuViewController: UIViewController {
         prepareMenuButton(cartMenuButton)
         prepareMenuButton(settingsMenuButton)
         prepareMenuButton(logoutMenuButton)
+
+        shopMenuButton.addTarget(self, action: #selector(handleShopButton), for: .touchUpInside)
     }
 }
 
@@ -75,6 +77,11 @@ extension EcommerceMenuViewController {
 
         // Transition the ToolbarController rootViewController that is in the NavigationDrawer rootViewController.
         (navigationDrawerController?.rootViewController as? ToolbarController)?.transition(to: EcommerceCartViewController(), completion: closeNavigationDrawer)
+    }
+
+    @objc
+    fileprivate func handleShopButton() {
+        (navigationDrawerController?.rootViewController as? ToolbarController)?.transition(to: StoryboardEntityProvider().ecommerceProductCollectionVC(), completion: closeNavigationDrawer)
     }
 
     fileprivate func closeNavigationDrawer(result: Bool) {

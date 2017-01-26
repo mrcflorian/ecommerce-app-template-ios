@@ -25,6 +25,7 @@
 		17825D8E1E356BF200A03FC5 /* EcommerceProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17825D8D1E356BF200A03FC5 /* EcommerceProductDetailsViewController.swift */; };
 		17825D901E356ED200A03FC5 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17825D8F1E356ED200A03FC5 /* ImageCollectionViewCell.swift */; };
 		17825D931E3852C700A03FC5 /* ShoppingCartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17825D921E3852C700A03FC5 /* ShoppingCartManager.swift */; };
+		17825D951E3AAC5900A03FC5 /* EcommerceAppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17825D941E3AAC5900A03FC5 /* EcommerceAppNavigationController.swift */; };
 		3C080925C4927DE51FF202F6 /* Pods_EcommerceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A77003E3BA55AED5BB62B93B /* Pods_EcommerceApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		17825D8D1E356BF200A03FC5 /* EcommerceProductDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcommerceProductDetailsViewController.swift; sourceTree = "<group>"; };
 		17825D8F1E356ED200A03FC5 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		17825D921E3852C700A03FC5 /* ShoppingCartManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartManager.swift; sourceTree = "<group>"; };
+		17825D941E3AAC5900A03FC5 /* EcommerceAppNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcommerceAppNavigationController.swift; sourceTree = "<group>"; };
 		1EA0814B1EFE100BECD440B2 /* Pods-EcommerceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcommerceApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EcommerceApp/Pods-EcommerceApp.debug.xcconfig"; sourceTree = "<group>"; };
 		84C4903F70CB6CB03F788679 /* Pods-EcommerceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcommerceApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-EcommerceApp/Pods-EcommerceApp.release.xcconfig"; sourceTree = "<group>"; };
 		A77003E3BA55AED5BB62B93B /* Pods_EcommerceApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EcommerceApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +116,7 @@
 				1767F75C1E344E7800E8AD1F /* ProductCollectionViewCell.swift */,
 				17825D8D1E356BF200A03FC5 /* EcommerceProductDetailsViewController.swift */,
 				17825D8F1E356ED200A03FC5 /* ImageCollectionViewCell.swift */,
+				17825D941E3AAC5900A03FC5 /* EcommerceAppNavigationController.swift */,
 			);
 			path = EcommerceApp;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				17825D901E356ED200A03FC5 /* ImageCollectionViewCell.swift in Sources */,
 				1767F75D1E344E7800E8AD1F /* ProductCollectionViewCell.swift in Sources */,
 				1767F7591E344B7100E8AD1F /* Product.swift in Sources */,
+				17825D951E3AAC5900A03FC5 /* EcommerceAppNavigationController.swift in Sources */,
 				17825D8E1E356BF200A03FC5 /* EcommerceProductDetailsViewController.swift in Sources */,
 				177867641E34147900BF7080 /* StoryboardEntityProvider.swift in Sources */,
 				177867481E33F86000BF7080 /* ViewController.swift in Sources */,
