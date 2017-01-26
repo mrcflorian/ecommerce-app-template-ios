@@ -18,14 +18,11 @@ class EcommerceProductDetailsViewController: UIViewController {
         }
     }
 
-    fileprivate var backButton: IconButton?
-
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var pageControl: UIPageControl!
     @IBOutlet var detailsTextView: UITextView!
     @IBOutlet var addToCartButton: RaisedButton!
     @IBOutlet var contentView: UIView!
-
     
     @IBOutlet var contentViewHeightConstraint: NSLayoutConstraint!
 
@@ -74,10 +71,10 @@ class EcommerceProductDetailsViewController: UIViewController {
     }
 
     fileprivate func prepareNavigationItem() {
-        let backButton = IconButton(image: Icon.cm.arrowBack)
-        backButton.addTarget(self, action: #selector(didTapBackButton), for: .touchUpInside)
+        let closeButton = IconButton(image: Icon.cm.close)
+        closeButton.addTarget(self, action: #selector(didTapBackButton), for: .touchUpInside)
         navigationItem.title = product?.productName
-        navigationItem.leftViews = [backButton]
+        navigationItem.rightViews = [closeButton]
     }
 
     @objc

@@ -153,22 +153,22 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="19.5" id="Vrt-H6-MBh"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="$45" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqa-dJ-YXx">
-                                            <rect key="frame" x="81" y="190" width="48" height="17"/>
-                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
-                                            <nil key="textColor"/>
+                                            <rect key="frame" x="74.5" y="190" width="54.5" height="14.5"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                                            <color key="textColor" red="0.074509803921568626" green="0.32156862745098036" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T-Shirt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74B-sG-AX9">
-                                            <rect key="frame" x="15" y="190" width="42" height="17"/>
+                                            <rect key="frame" x="15" y="190" width="35.5" height="17"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="17" id="xEf-NC-e9b"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
                                             <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -244,17 +244,17 @@
                                                             <constraint firstAttribute="height" constant="330" id="PDU-18-hK3"/>
                                                         </constraints>
                                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="g5d-6C-JiK">
-                                                            <size key="itemSize" width="250" height="330"/>
+                                                            <size key="itemSize" width="250" height="320"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
                                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCollectionViewCell" id="A8p-cD-9QQ" customClass="ImageCollectionViewCell" customModule="EcommerceApp" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="250" height="330"/>
+                                                                <rect key="frame" x="0.0" y="5" width="250" height="320"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="250" height="330"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="250" height="320"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z1U-xD-y7T">
@@ -300,7 +300,7 @@
                                                 </constraints>
                                             </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XfW-SB-x6k">
-                                                <rect key="frame" x="0.0" y="370" width="375" height="158"/>
+                                                <rect key="frame" x="25" y="370" width="325" height="158"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="158" placeholder="YES" id="x14-Um-Rtu"/>
@@ -324,7 +324,7 @@
                                             <constraint firstItem="XfW-SB-x6k" firstAttribute="top" secondItem="gl3-jj-ZkN" secondAttribute="bottom" id="3qZ-lF-ye2"/>
                                             <constraint firstAttribute="height" constant="1200" id="J03-kj-EOD"/>
                                             <constraint firstItem="XfW-SB-x6k" firstAttribute="centerX" secondItem="Dcb-Og-h1D" secondAttribute="centerX" id="M0p-Eb-fVX"/>
-                                            <constraint firstItem="XfW-SB-x6k" firstAttribute="width" secondItem="Dcb-Og-h1D" secondAttribute="width" id="d0c-nt-Aul"/>
+                                            <constraint firstItem="XfW-SB-x6k" firstAttribute="width" secondItem="Dcb-Og-h1D" secondAttribute="width" constant="-50" id="d0c-nt-Aul"/>
                                             <constraint firstItem="EMa-CI-YAO" firstAttribute="top" secondItem="XfW-SB-x6k" secondAttribute="bottom" constant="19" id="gEJ-hB-qZz"/>
                                             <constraint firstItem="gl3-jj-ZkN" firstAttribute="centerX" secondItem="Dcb-Og-h1D" secondAttribute="centerX" id="n6t-dJ-xX5"/>
                                             <constraint firstItem="gl3-jj-ZkN" firstAttribute="width" secondItem="Dcb-Og-h1D" secondAttribute="width" id="oXo-fm-dV0"/>
