@@ -23,10 +23,20 @@ class ShoppingCartManager {
     }
 
     func productCount() -> Int {
-        //return cart.itemDictionary.count
-
         return cart.itemDictionary.reduce(0) { (x, entry: (key: String, value: ShoppingCartItem)) -> Int in
             return x + entry.value.quantity
         }
+    }
+
+    func distinctProducts() -> [Product] {
+        return cart.itemDictionary.values.map({$0.product})
+    }
+
+    func distinctProductCount() -> Int {
+        return self.distinctProducts().count
+    }
+
+    func distinctProductItems() -> [ShoppingCartItem] {
+        return cart.itemDictionary.values.map({$0})
     }
 }

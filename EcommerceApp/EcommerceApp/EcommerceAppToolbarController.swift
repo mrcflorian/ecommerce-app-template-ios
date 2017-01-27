@@ -13,7 +13,7 @@ class EcommerceAppToolbarController: ToolbarController {
     fileprivate var menuButton: IconButton!
     fileprivate var cartButton: IconButton!
 
-    fileprivate var cartManager = ShoppingCartManager()
+    var cartManager = ShoppingCartManager()
 
     override func prepare() {
         super.prepare()
@@ -49,7 +49,7 @@ extension EcommerceAppToolbarController {
         cartButton = IconButton(image: UIImage(named: "shopping-cart-menu-item"))
         cartButton.tintColor = Color.blue
         cartButton.backgroundColor = Color.green.base
-        cartButton.addTarget(self, action: #selector(handleSearchButton), for: .touchUpInside)
+        cartButton.addTarget(self, action: #selector(handleCartButton), for: .touchUpInside)
         cartButton.titleColor = .white
         cartButton.layer.cornerRadius = 5
     }
@@ -74,7 +74,10 @@ extension EcommerceAppToolbarController {
     }
 
     @objc
-    fileprivate func handleSearchButton() {
+    fileprivate func handleCartButton() {
+        let cartVC = StoryboardEntityProvider().ecommerceCartVC()
+        self.transition(to: cartVC, completion: nil)
+        cartVC.cartManager = cartManager
         navigationDrawerController?.toggleRightView()
     }
 }

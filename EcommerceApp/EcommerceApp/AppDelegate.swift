@@ -16,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidFinishLaunching(_ application: UIApplication) {
         let homeVC = StoryboardEntityProvider().ecommerceProductCollectionVC()
-        homeVC.screenTitle = "Shop"
 
         let appToolbarController = EcommerceAppToolbarController(rootViewController: homeVC)
         let menuViewController = StoryboardEntityProvider().ecommerceMenuViewController()
@@ -26,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window!.makeKeyAndVisible()
 
         homeVC.products = Product.mockProducts()
+        homeVC.screenTitle = "Shop"
     }
 }
 

@@ -22,7 +22,6 @@ class MenuButton: FlatButton {
 }
 
 class EcommerceMenuViewController: UIViewController {
-    fileprivate var transitionButton: FlatButton!
 
     @IBOutlet var userNameLabel: UILabel!
 
@@ -36,7 +35,6 @@ class EcommerceMenuViewController: UIViewController {
     open override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(colorLiteralRed: 39/255, green: 44/255, blue: 48/255, alpha: 1)
-        prepareTransitionButton()
         prepareAvatarButton()
         prepareMenuButton(shopMenuButton)
         prepareMenuButton(cartMenuButton)
@@ -44,16 +42,11 @@ class EcommerceMenuViewController: UIViewController {
         prepareMenuButton(logoutMenuButton)
 
         shopMenuButton.addTarget(self, action: #selector(handleShopButton), for: .touchUpInside)
+        cartMenuButton.addTarget(self, action: #selector(handleCartButton), for: .touchUpInside)
     }
 }
 
 extension EcommerceMenuViewController {
-    fileprivate func prepareTransitionButton() {
-        transitionButton = FlatButton(title: "Transition VC", titleColor: .white)
-        transitionButton.pulseColor = .white
-        transitionButton.addTarget(self, action: #selector(handleTransitionButton), for: .touchUpInside)
-    }
-
     fileprivate func prepareAvatarButton() {
         let image = UIImage(named: "shopping-avatar", in: nil, compatibleWith: nil)?.withRenderingMode(.alwaysOriginal)
         avatarButton.image = image
@@ -71,21 +64,26 @@ extension EcommerceMenuViewController {
 
 extension EcommerceMenuViewController {
     @objc
-    fileprivate func handleTransitionButton() {
-        // Transition the entire NavigationDrawer rootViewController.
-        //        navigationDrawerController?.transition(to: TransitionedViewController(), completion: closeNavigationDrawer)
-
-        // Transition the ToolbarController rootViewController that is in the NavigationDrawer rootViewController.
-        (navigationDrawerController?.rootViewController as? ToolbarController)?.transition(to: EcommerceCartViewController(), completion: closeNavigationDrawer)
+    fileprivate func handleShopButton() {
+        let shopVC = StoryboardEntityProvider().ecommerceProductCollectionVC()
+        shopVC.screenTitle = "Shop"
+        toolbarController()?.transition(to: shopVC, completion: closeNavigationDrawer)
     }
 
     @objc
-    fileprivate func handleShopButton() {
-        (navigationDrawerController?.rootViewController as? ToolbarController)?.transition(to: StoryboardEntityProvider().ecommerceProductCollectionVC(), completion: closeNavigationDrawer)
+    fileprivate func handleCartButton() {
+        let cartVC = StoryboardEntityProvider().ecommerceCartVC()
+        let cartManager = toolbarController()?.cartManager
+        toolbarController()?.transition(to: cartVC, completion: closeNavigationDrawer)
+        cartVC.cartManager = cartManager
     }
 
     fileprivate func closeNavigationDrawer(result: Bool) {
         navigationDrawerController?.closeLeftView()
+    }
+
+    fileprivate func toolbarController() -> EcommerceAppToolbarController? {
+        return (navigationDrawerController?.rootViewController as? EcommerceAppToolbarController)
     }
 }
 
