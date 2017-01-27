@@ -38,6 +38,7 @@ class EcommerceProductDetailsViewController: UIViewController {
         addToCartButton.backgroundColor = Color.green.base
         addToCartButton.titleColor = .white
         addToCartButton.layer.cornerRadius = 20
+        addToCartButton.addTarget(self, action: #selector(didTapAddToCartButton), for: .touchUpInside)
 
         updateContentViewHeight()
         prepareNavigationItem()
@@ -79,6 +80,12 @@ class EcommerceProductDetailsViewController: UIViewController {
 
     @objc
     fileprivate func didTapBackButton() {
+        self.dismiss(animated: true, completion: nil)
+    }
+
+    @objc
+    fileprivate func didTapAddToCartButton() {
+        NotificationCenter.default.post(name: kNotificationDidAddProductToCart, object: nil, userInfo: ["product": product ?? nil])
         self.dismiss(animated: true, completion: nil)
     }
 }

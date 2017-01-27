@@ -11,14 +11,31 @@ import Material
 
 class EcommerceAppToolbarController: ToolbarController {
     fileprivate var menuButton: IconButton!
-    fileprivate var searchButton: IconButton!
+    fileprivate var cartButton: IconButton!
+
+    fileprivate var cartManager = ShoppingCartManager()
 
     override func prepare() {
         super.prepare()
         prepareMenuButton()
-        prepareMoreButton()
+        prepareCartButton()
         prepareStatusBar()
         prepareToolbar()
+
+        NotificationCenter.default.addObserver(self, selector: #selector(didSendAddToCartNotification), name: kNotificationDidAddProductToCart, object: nil)
+    }
+
+    func addProduct(product: Product) {
+        cartManager.addProduct(product: product)
+        cartButton.title = " \(cartManager.productCount())"
+    }
+
+    @objc
+    fileprivate func didSendAddToCartNotification(notification: Notification) {
+        guard let product = notification.userInfo?["product"] as? Product else {
+            return
+        }
+        self.addProduct(product: product)
     }
 }
 
@@ -28,9 +45,13 @@ extension EcommerceAppToolbarController {
         menuButton.addTarget(self, action: #selector(handleMenuButton), for: .touchUpInside)
     }
 
-    fileprivate func prepareMoreButton() {
-        searchButton = IconButton(image: Icon.cm.search)
-        searchButton.addTarget(self, action: #selector(handleSearchButton), for: .touchUpInside)
+    fileprivate func prepareCartButton() {
+        cartButton = IconButton(image: UIImage(named: "shopping-cart-menu-item"))
+        cartButton.tintColor = Color.blue
+        cartButton.backgroundColor = Color.green.base
+        cartButton.addTarget(self, action: #selector(handleSearchButton), for: .touchUpInside)
+        cartButton.titleColor = .white
+        cartButton.layer.cornerRadius = 5
     }
 
     fileprivate func prepareStatusBar() {
@@ -42,7 +63,7 @@ extension EcommerceAppToolbarController {
 
     fileprivate func prepareToolbar() {
         toolbar.leftViews = [menuButton]
-        toolbar.rightViews = [searchButton]
+        toolbar.rightViews = [cartButton]
     }
 }
 
