@@ -39,4 +39,13 @@ class ShoppingCartManager {
     func distinctProductItems() -> [ShoppingCartItem] {
         return cart.itemDictionary.values.map({$0})
     }
+
+    func totalPrice() -> Double {
+        return cart.itemDictionary.reduce(0.0) { (x, entry: (key: String, value: ShoppingCartItem)) -> Double in
+            if let price = entry.value.product.productPrice {
+                return x + Double(entry.value.quantity) * price
+            }
+            return x
+        }
+    }
 }

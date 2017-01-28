@@ -33,14 +33,26 @@ class EcommerceCartTableViewController: UITableViewController {
         guard let cartManager = cartManager else {
             return 0
         }
-        return cartManager.distinctProductCount()
+        return cartManager.distinctProductCount() + 2
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell", for: indexPath) as! CartTableViewCell
+        guard let cartManager = cartManager else {
+            return UITableViewCell()
+        }
+        if (indexPath.row < cartManager.distinctProductCount()) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell", for: indexPath) as! CartTableViewCell
 
-        cell.configureCell(item: cartManager?.distinctProductItems()[indexPath.row])
+            cell.configureCell(item: cartManager.distinctProductItems()[indexPath.row])
 
+            return cell
+        } else if (indexPath.row == cartManager.distinctProductCount()) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CartTotalTableViewCell", for: indexPath) as! CartTotalTableViewCell
+            cell.configureCell(total: cartManager.totalPrice())
+            return cell
+        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CartPlaceOrderTableViewCell", for: indexPath) as! CartPlaceOrderTableViewCell
+        cell.configureCell(cartManager: cartManager)
         return cell
     }
 }

@@ -22,7 +22,7 @@ class CartTableViewCell: UITableViewCell {
             productImageView.kf.setImage(with: URL(string: url))
         }
         if let price = item.product.productPrice {
-            productPriceLabel.text = String(format:"$%.2f", price)
+            productPriceLabel.text = String(format:"$%.2f", price * Double(item.quantity))
         }
         productNameLabel.text = item.product.productName
     }

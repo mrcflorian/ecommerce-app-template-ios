@@ -385,7 +385,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Li5-Rw-EUY">
-                                            <rect key="frame" x="85" y="11" width="232" height="21"/>
+                                            <rect key="frame" x="85" y="26" width="232" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="Rdm-tb-mHq"/>
                                             </constraints>
@@ -406,9 +406,9 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Li5-Rw-EUY" firstAttribute="leading" secondItem="QNG-i3-4X8" secondAttribute="trailing" constant="21" id="4qM-CS-pgE"/>
-                                        <constraint firstItem="Li5-Rw-EUY" firstAttribute="top" secondItem="GMh-Pz-abp" secondAttribute="topMargin" constant="3" id="78v-Lu-Xe4"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Li5-Rw-EUY" secondAttribute="trailing" constant="50" id="Gjv-Gc-JH6"/>
                                         <constraint firstItem="QNG-i3-4X8" firstAttribute="centerY" secondItem="GMh-Pz-abp" secondAttribute="centerY" id="Vpi-E9-EiG"/>
+                                        <constraint firstItem="Li5-Rw-EUY" firstAttribute="centerY" secondItem="GMh-Pz-abp" secondAttribute="centerY" id="lIl-lI-OpW"/>
                                         <constraint firstItem="wUm-QP-xnY" firstAttribute="centerY" secondItem="GMh-Pz-abp" secondAttribute="centerY" id="ngd-91-8aZ"/>
                                         <constraint firstItem="QNG-i3-4X8" firstAttribute="leading" secondItem="GMh-Pz-abp" secondAttribute="leadingMargin" constant="10" id="vUs-1I-SsK"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="wUm-QP-xnY" secondAttribute="trailing" constant="3" id="vfP-Ck-LhD"/>
@@ -418,6 +418,72 @@
                                     <outlet property="productImageView" destination="QNG-i3-4X8" id="790-AV-lYc"/>
                                     <outlet property="productNameLabel" destination="Li5-Rw-EUY" id="su9-S0-mFn"/>
                                     <outlet property="productPriceLabel" destination="wUm-QP-xnY" id="p4C-re-d00"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CartTotalTableViewCell" rowHeight="73" id="DPF-ZU-wLc" customClass="CartTotalTableViewCell" customModule="EcommerceApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="101" width="375" height="73"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DPF-ZU-wLc" id="blx-67-PLC">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAr-mL-AYh">
+                                            <rect key="frame" x="24" y="26" width="52" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="52" id="Fq9-FA-DDX"/>
+                                                <constraint firstAttribute="height" constant="21" id="lGC-Kl-b6a"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$180" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMH-E7-PJd">
+                                            <rect key="frame" x="257" y="26" width="107" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="107" id="6QG-os-Ldb"/>
+                                                <constraint firstAttribute="height" constant="21" id="J1f-09-pWc"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="PMH-E7-PJd" firstAttribute="centerY" secondItem="blx-67-PLC" secondAttribute="centerY" id="3Tv-8t-81g"/>
+                                        <constraint firstItem="yAr-mL-AYh" firstAttribute="centerY" secondItem="blx-67-PLC" secondAttribute="centerY" id="6dr-6J-qnF"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="PMH-E7-PJd" secondAttribute="trailing" constant="3" id="fjZ-6r-0nW"/>
+                                        <constraint firstItem="yAr-mL-AYh" firstAttribute="leading" secondItem="blx-67-PLC" secondAttribute="leadingMargin" constant="16" id="q1t-G9-5rQ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="totalPriceLabel" destination="PMH-E7-PJd" id="huw-o6-5nY"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CartPlaceOrderTableViewCell" rowHeight="73" id="Vox-x1-HtI" customClass="CartPlaceOrderTableViewCell" customModule="EcommerceApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="174" width="375" height="73"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vox-x1-HtI" id="rsP-Ui-T5Y">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7Y-l0-WM2" customClass="RaisedButton" customModule="Material">
+                                            <rect key="frame" x="0.0" y="-0.5" width="375" height="73"/>
+                                            <color key="backgroundColor" red="0.10980392156862745" green="0.3411764705882353" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
+                                            <state key="normal" title="PLACE ORDER">
+                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="p7Y-l0-WM2" firstAttribute="height" secondItem="rsP-Ui-T5Y" secondAttribute="height" id="5qL-pl-JLw"/>
+                                        <constraint firstItem="p7Y-l0-WM2" firstAttribute="centerY" secondItem="rsP-Ui-T5Y" secondAttribute="centerY" id="NTC-sM-h4g"/>
+                                        <constraint firstItem="p7Y-l0-WM2" firstAttribute="centerX" secondItem="rsP-Ui-T5Y" secondAttribute="centerX" id="Rv3-Vb-WSv"/>
+                                        <constraint firstItem="p7Y-l0-WM2" firstAttribute="width" secondItem="rsP-Ui-T5Y" secondAttribute="width" id="Xrf-E9-qD9"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="placeOrderButton" destination="p7Y-l0-WM2" id="v2F-jp-2mR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
