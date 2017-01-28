@@ -24,6 +24,9 @@ class CartTableViewCell: UITableViewCell {
         if let price = item.product.productPrice {
             productPriceLabel.text = String(format:"$%.2f", price * Double(item.quantity))
         }
-        productNameLabel.text = item.product.productName
+        if let productName = item.product.productName {
+            let name = (item.quantity > 1) ? productName + " x \(item.quantity)" : productName
+            productNameLabel.text = name
+        }
     }
 }

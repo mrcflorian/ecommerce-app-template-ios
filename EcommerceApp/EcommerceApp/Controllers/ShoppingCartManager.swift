@@ -9,6 +9,7 @@
 import Foundation
 
 let kNotificationDidAddProductToCart = NSNotification.Name(rawValue: "kNotificationDidAddProductToCart")
+let kNotificationDidAClearCart = NSNotification.Name(rawValue: "kNotificationDidAClearCart")
 
 class ShoppingCartManager {
 
@@ -47,5 +48,10 @@ class ShoppingCartManager {
             }
             return x
         }
+    }
+
+    func clearProducts() {
+        cart.itemDictionary = [:]
+        NotificationCenter.default.post(name: kNotificationDidAClearCart, object: nil)
     }
 }

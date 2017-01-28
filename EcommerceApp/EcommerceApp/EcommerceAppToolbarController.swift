@@ -23,10 +23,15 @@ class EcommerceAppToolbarController: ToolbarController {
         prepareToolbar()
 
         NotificationCenter.default.addObserver(self, selector: #selector(didSendAddToCartNotification), name: kNotificationDidAddProductToCart, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didClearCartNotification), name: kNotificationDidAClearCart, object: nil)
     }
 
     func addProduct(product: Product) {
         cartManager.addProduct(product: product)
+        self.updateCartButton()
+    }
+
+    fileprivate func updateCartButton() {
         cartButton.title = " \(cartManager.productCount())"
     }
 
@@ -36,6 +41,11 @@ class EcommerceAppToolbarController: ToolbarController {
             return
         }
         self.addProduct(product: product)
+    }
+
+    @objc
+    fileprivate func didClearCartNotification(notification: Notification) {
+        self.updateCartButton()
     }
 }
 

@@ -23,6 +23,13 @@ class EcommerceCartTableViewController: UITableViewController {
         }
     }
 
+    func didPlaceOrder() {
+        // This is where you need to handle the placing of an order, based on the shopping cart configuration, accessible from cartMananger local var
+        // The current implementation only clears the shopping cart
+        cartManager?.clearProducts()
+        self.tableView.reloadData()
+    }
+
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -53,6 +60,7 @@ class EcommerceCartTableViewController: UITableViewController {
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "CartPlaceOrderTableViewCell", for: indexPath) as! CartPlaceOrderTableViewCell
         cell.configureCell(cartManager: cartManager)
+        cell.delegate = self
         return cell
     }
 }

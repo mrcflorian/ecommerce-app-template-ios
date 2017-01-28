@@ -11,12 +11,11 @@ import UIKit
 
 class CartPlaceOrderTableViewCell: UITableViewCell {
 
+    weak var delegate: EcommerceCartTableViewController?
+
     @IBOutlet var placeOrderButton: RaisedButton!
 
-    var cartManager: ShoppingCartManager?
-
     func configureCell(cartManager: ShoppingCartManager) {
-        self.cartManager = cartManager
         self.isUserInteractionEnabled = true
         placeOrderButton.addTarget(self, action: #selector(handlePlaceOrderButton), for: .touchUpInside)
         placeOrderButton.backgroundColor = UIColor(colorLiteralRed: 28/255, green: 87/255, blue: 255/255, alpha: 1)
@@ -24,6 +23,6 @@ class CartPlaceOrderTableViewCell: UITableViewCell {
 
     @objc
     fileprivate func handlePlaceOrderButton() {
-        // This is where you need to handle the placing of an order, based on the shopping cart configuration, accessible from cartMananger local var
+        delegate?.didPlaceOrder()
     }
 }
