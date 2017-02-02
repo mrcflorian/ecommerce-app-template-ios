@@ -43,6 +43,7 @@ class EcommerceMenuViewController: UIViewController {
 
         shopMenuButton.addTarget(self, action: #selector(handleShopButton), for: .touchUpInside)
         cartMenuButton.addTarget(self, action: #selector(handleCartButton), for: .touchUpInside)
+        settingsMenuButton.addTarget(self, action: #selector(handleSettingsButton), for: .touchUpInside)
     }
 }
 
@@ -76,6 +77,16 @@ extension EcommerceMenuViewController {
         let cartManager = toolbarController()?.cartManager
         toolbarController()?.transition(to: cartVC, completion: closeNavigationDrawer)
         cartVC.cartManager = cartManager
+    }
+
+    @objc
+    fileprivate func handleSettingsButton() {
+        let settingsVC = StoryboardEntityProvider().settingsVC()
+
+        if let tc = toolbarController() {
+            tc.toolbar.title = "Settings"
+        }
+        toolbarController()?.transition(to: settingsVC, completion: closeNavigationDrawer)
     }
 
     fileprivate func closeNavigationDrawer(result: Bool) {
