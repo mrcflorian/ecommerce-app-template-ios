@@ -16,11 +16,9 @@ class EcommerceCartTableViewController: UITableViewController {
         }
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if let tc = toolbarController {
-            tc.toolbar.title = "Shopping cart"
-        }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.tableFooterView = UIView()
     }
 
     func didPlaceOrder() {

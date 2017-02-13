@@ -14,6 +14,7 @@ private let reuseIdentifier = "ImageCollectionViewCell"
 class EcommerceProductDetailsViewController: UIViewController {
     var product: Product? {
         didSet {
+            self.title = product?.productName
             self.view.setNeedsLayout()
         }
     }
@@ -33,7 +34,6 @@ class EcommerceProductDetailsViewController: UIViewController {
             pageControl.numberOfPages = images.count
         }
 
-        addToCartButton.addTarget(self, action: #selector(handleAddToCartButton), for: .touchUpInside)
         addToCartButton.pulseColor = .white
         addToCartButton.backgroundColor = Color.green.base
         addToCartButton.titleColor = .white
@@ -41,7 +41,6 @@ class EcommerceProductDetailsViewController: UIViewController {
         addToCartButton.addTarget(self, action: #selector(didTapAddToCartButton), for: .touchUpInside)
 
         updateContentViewHeight()
-        prepareNavigationItem()
     }
 
     override func viewDidLayoutSubviews() {
@@ -57,11 +56,6 @@ class EcommerceProductDetailsViewController: UIViewController {
         updateContentViewHeight()
     }
 
-    @objc
-    fileprivate func handleAddToCartButton() {
-
-    }
-
     fileprivate func updateContentViewHeight() {
         let orientation = UIDevice.current.orientation
         let constant: CGFloat = self.detailsTextView.frame.size.height + ((orientation == .portrait) ? 550 : 450)
@@ -71,22 +65,10 @@ class EcommerceProductDetailsViewController: UIViewController {
         }
     }
 
-    fileprivate func prepareNavigationItem() {
-        let closeButton = IconButton(image: Icon.cm.close)
-        closeButton.addTarget(self, action: #selector(didTapBackButton), for: .touchUpInside)
-        navigationItem.title = product?.productName
-        navigationItem.rightViews = [closeButton]
-    }
-
-    @objc
-    fileprivate func didTapBackButton() {
-        self.dismiss(animated: true, completion: nil)
-    }
-
     @objc
     fileprivate func didTapAddToCartButton() {
         NotificationCenter.default.post(name: kNotificationDidAddProductToCart, object: nil, userInfo: ["product": product ?? nil])
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
 }
 

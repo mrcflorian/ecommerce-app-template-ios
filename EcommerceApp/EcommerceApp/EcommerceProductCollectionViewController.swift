@@ -45,8 +45,7 @@ class EcommerceProductCollectionViewController: UICollectionViewController, UICo
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailsVC = StoryboardEntityProvider().ecommerceProductDetailsVC()
         detailsVC.product = products[indexPath.row]
-        let navigationController = EcommerceAppNavigationController(rootViewController: detailsVC)
-       self.present(navigationController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(detailsVC, animated: true)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
