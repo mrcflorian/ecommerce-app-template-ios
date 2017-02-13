@@ -18,13 +18,6 @@ class EcommerceProductCollectionViewController: UICollectionViewController, UICo
         }
     }
 
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-
-        let offsetY: CGFloat = UIDeviceOrientationIsLandscape(UIDevice.current.orientation) ? 35 : 70
-        self.collectionView?.frame = CGRect(x: self.view.bounds.origin.x, y: self.view.bounds.origin.y, width: self.view.bounds.width, height: UIScreen.main.bounds.height - offsetY)
-    }
-
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
