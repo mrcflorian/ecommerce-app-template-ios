@@ -6,6 +6,25 @@ target 'EcommerceApp' do
   use_frameworks!
 
   # Pods for EcommerceApp
-    pod 'Kingfisher'
-	pod 'Material', '~> 2.0'
+
+  pod 'Alamofire', '~> 4.3'
+  pod "AlamofireRSSParser"
+  pod 'ObjectMapper', '~> 2.2'
+
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'FacebookShare'
+
+  pod 'Fabric'
+  pod 'TwitterKit'
+  pod 'TwitterCore'
+
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+
+  pod 'Stripe'
+
+  pod 'Material', '~> 2.0'
+  pod 'Kingfisher'
+
 end

@@ -11,123 +11,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Ecommerce Menu View Controller-->
-        <scene sceneID="fKH-8E-163">
-            <objects>
-                <viewController storyboardIdentifier="EcommerceMenuViewController" id="kVm-47-tux" customClass="EcommerceMenuViewController" customModule="EcommerceApp" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="i1F-wJ-aMM"/>
-                        <viewControllerLayoutGuide type="bottom" id="L3d-lV-sCp"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="J09-Iu-RjO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jessica Smith" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBK-dP-ruB" userLabel="Username Label">
-                                <rect key="frame" x="0.0" y="178" width="375" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Uhe-OX-8Bx"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jU9-A0-lHr" customClass="IconButton" customModule="Material">
-                                <rect key="frame" x="152" y="90" width="70" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="fUZ-F6-Luq"/>
-                                    <constraint firstAttribute="height" constant="70" id="gvh-KN-Mir"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s0Q-wD-fqJ" userLabel="Menu Container View">
-                                <rect key="frame" x="0.0" y="238.5" width="375" height="315.5"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mz3-RU-PxO" customClass="MenuButton" customModule="EcommerceApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.5" y="0.0" width="375" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="kZX-bE-oKz"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="18"/>
-                                        <state key="normal" title="Shop" image="shop-menu-icon">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrk-AM-Hnw" userLabel="Cart Button" customClass="MenuButton" customModule="EcommerceApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="40" width="375" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="nsy-Zr-sv0"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="18"/>
-                                        <state key="normal" title="Cart" image="shopping-cart-menu-item"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10W-Lr-Fk6" customClass="MenuButton" customModule="EcommerceApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.5" y="80" width="375" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="Zrh-cQ-v5V"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="18"/>
-                                        <state key="normal" title="Settings" image="settings-menu-item">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kr4-Ig-wyQ" customClass="MenuButton" customModule="EcommerceApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="120" width="375" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="I6v-uE-hHH"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="18"/>
-                                        <state key="normal" title="Log out" image="logout-menu-item"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="10W-Lr-Fk6" firstAttribute="top" secondItem="lrk-AM-Hnw" secondAttribute="bottom" id="6Tq-bj-fQ8"/>
-                                    <constraint firstItem="lrk-AM-Hnw" firstAttribute="width" secondItem="s0Q-wD-fqJ" secondAttribute="width" id="7t9-Yz-hNy"/>
-                                    <constraint firstItem="Kr4-Ig-wyQ" firstAttribute="top" secondItem="10W-Lr-Fk6" secondAttribute="bottom" id="Dqc-RK-AXH"/>
-                                    <constraint firstItem="Kr4-Ig-wyQ" firstAttribute="width" secondItem="s0Q-wD-fqJ" secondAttribute="width" id="Lgu-A2-8bS"/>
-                                    <constraint firstItem="10W-Lr-Fk6" firstAttribute="width" secondItem="s0Q-wD-fqJ" secondAttribute="width" id="NAO-jp-lA8"/>
-                                    <constraint firstItem="Kr4-Ig-wyQ" firstAttribute="centerX" secondItem="s0Q-wD-fqJ" secondAttribute="centerX" id="P0m-sb-sj8"/>
-                                    <constraint firstItem="mz3-RU-PxO" firstAttribute="top" secondItem="s0Q-wD-fqJ" secondAttribute="top" id="Sxe-RY-fVn"/>
-                                    <constraint firstItem="10W-Lr-Fk6" firstAttribute="centerX" secondItem="s0Q-wD-fqJ" secondAttribute="centerX" id="Ysf-sx-MLo"/>
-                                    <constraint firstItem="mz3-RU-PxO" firstAttribute="width" secondItem="s0Q-wD-fqJ" secondAttribute="width" id="noh-yq-qdD"/>
-                                    <constraint firstItem="lrk-AM-Hnw" firstAttribute="top" secondItem="mz3-RU-PxO" secondAttribute="bottom" id="tkc-dO-lpa"/>
-                                    <constraint firstItem="mz3-RU-PxO" firstAttribute="centerX" secondItem="s0Q-wD-fqJ" secondAttribute="centerX" id="xAL-gh-rHV"/>
-                                    <constraint firstItem="lrk-AM-Hnw" firstAttribute="centerX" secondItem="s0Q-wD-fqJ" secondAttribute="centerX" id="xAP-ac-6nl"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="s0Q-wD-fqJ" firstAttribute="top" secondItem="hBK-dP-ruB" secondAttribute="bottom" multiplier="1.1" constant="20" id="7iX-kw-0Hw"/>
-                            <constraint firstItem="s0Q-wD-fqJ" firstAttribute="width" secondItem="J09-Iu-RjO" secondAttribute="width" id="91b-GT-fyg"/>
-                            <constraint firstItem="jU9-A0-lHr" firstAttribute="top" secondItem="i1F-wJ-aMM" secondAttribute="bottom" multiplier="4" constant="10" id="ZlY-at-Js6"/>
-                            <constraint firstItem="hBK-dP-ruB" firstAttribute="width" secondItem="J09-Iu-RjO" secondAttribute="width" id="axl-VL-QQD"/>
-                            <constraint firstItem="L3d-lV-sCp" firstAttribute="top" secondItem="s0Q-wD-fqJ" secondAttribute="bottom" constant="113" id="jhZ-qF-gax"/>
-                            <constraint firstItem="s0Q-wD-fqJ" firstAttribute="centerX" secondItem="J09-Iu-RjO" secondAttribute="centerX" id="pNl-zm-1GX"/>
-                            <constraint firstItem="jU9-A0-lHr" firstAttribute="centerX" secondItem="J09-Iu-RjO" secondAttribute="centerX" id="rYJ-4p-lRi"/>
-                            <constraint firstItem="hBK-dP-ruB" firstAttribute="top" secondItem="jU9-A0-lHr" secondAttribute="bottom" multiplier="1.05" constant="10" id="uLK-0W-rsE"/>
-                            <constraint firstItem="hBK-dP-ruB" firstAttribute="centerX" secondItem="J09-Iu-RjO" secondAttribute="centerX" id="xjI-7b-UqY"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="avatarButton" destination="jU9-A0-lHr" id="mcs-PR-xi6"/>
-                        <outlet property="cartMenuButton" destination="lrk-AM-Hnw" id="yJ4-Um-KNr"/>
-                        <outlet property="logoutMenuButton" destination="Kr4-Ig-wyQ" id="Bfx-qN-qTx"/>
-                        <outlet property="settingsMenuButton" destination="10W-Lr-Fk6" id="7Bo-mJ-eLn"/>
-                        <outlet property="shopMenuButton" destination="mz3-RU-PxO" id="9Oh-9l-lxG"/>
-                        <outlet property="userNameLabel" destination="hBK-dP-ruB" id="AqF-eg-Zpd"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="69c-c0-q4B" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-186.40000000000001" y="-31.03448275862069"/>
-        </scene>
         <!--Ecommerce Product Collection View Controller-->
         <scene sceneID="bGO-bK-n9u">
             <objects>
                 <collectionViewController storyboardIdentifier="EcommerceProductCollectionViewController" id="ePv-J6-Lxg" customClass="EcommerceProductCollectionViewController" customModule="EcommerceApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="Ebi-PV-n9W">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="Ebi-PV-n9W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
@@ -158,13 +46,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="$45" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqa-dJ-YXx">
-                                            <rect key="frame" x="74.5" y="190" width="54.5" height="14.5"/>
+                                            <rect key="frame" x="75" y="190" width="54" height="15"/>
                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
                                             <color key="textColor" red="0.074509803921568626" green="0.32156862745098036" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T-Shirt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74B-sG-AX9">
-                                            <rect key="frame" x="15" y="190" width="35.5" height="17"/>
+                                            <rect key="frame" x="15" y="190" width="36" height="17"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="17" id="xEf-NC-e9b"/>
                                             </constraints>
@@ -467,7 +355,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7Y-l0-WM2" customClass="RaisedButton" customModule="Material">
-                                            <rect key="frame" x="0.0" y="-0.5" width="375" height="73"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
                                             <color key="backgroundColor" red="0.10980392156862745" green="0.3411764705882353" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                             <state key="normal" title="PLACE ORDER">
@@ -540,7 +428,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYR-aB-4Mv">
-                                                    <rect key="frame" x="34" y="11.5" width="142" height="21"/>
+                                                    <rect key="frame" x="34" y="11" width="142" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="142" id="8i9-WL-iQ4"/>
                                                         <constraint firstAttribute="height" constant="21" id="eaM-gw-eC9"/>
@@ -573,7 +461,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Push Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecx-i0-ai5">
-                                                    <rect key="frame" x="34" y="11.5" width="139" height="21"/>
+                                                    <rect key="frame" x="34" y="11" width="139" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="139" id="bsR-s2-qYB"/>
                                                         <constraint firstAttribute="height" constant="21" id="oG3-dO-TYz"/>
@@ -606,7 +494,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weY-KO-j2y">
-                                                    <rect key="frame" x="34" y="11.5" width="124" height="21"/>
+                                                    <rect key="frame" x="34" y="11" width="124" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="124" id="XFU-TW-qR7"/>
                                                         <constraint firstAttribute="height" constant="21" id="ikS-MY-2YW"/>
@@ -636,10 +524,4 @@
             <point key="canvasLocation" x="3183" y="41"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="logout-menu-item" width="25" height="25"/>
-        <image name="settings-menu-item" width="25" height="25"/>
-        <image name="shop-menu-icon" width="25" height="25"/>
-        <image name="shopping-cart-menu-item" width="25" height="25"/>
-    </resources>
 </document>
