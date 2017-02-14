@@ -13,7 +13,6 @@ class EcommerceHomeViewController: UIViewController {
     open override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Color.grey.lighten5
-
         prepareToolbar()
     }
 }

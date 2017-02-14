@@ -11,6 +11,7 @@ import FacebookCore
 import FacebookLogin
 import FacebookShare
 import Firebase
+import Material
 import Stripe
 import TwitterKit
 import UIKit
@@ -21,6 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     var cartManager = ShoppingCartManager()
+    fileprivate var cartButton: IconButton!
+
+    fileprivate var hostViewController: ATCHostViewController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         self.configureHostViewControllers()
@@ -63,9 +67,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(didSendAddToCartNotification), name: kNotificationDidAddProductToCart, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(didClearCartNotification), name: kNotificationDidAClearCart, object: nil)
 
-        let cartVC = StoryboardEntityProvider().ecommerceCartVC()
-        cartVC.cartManager = cartManager
-        cartVC.title = "Shopping Cart"
+        let cartViewController = StoryboardEntityProvider().ecommerceCartVC()
+        cartViewController.cartManager = cartManager
+        cartViewController.title = "Shopping Cart"
 
         // Settings view controller - user settings screen
         let action = { (_ viewController: UIViewController?) -> (Void) in
@@ -90,18 +94,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Navigation Item - Configuration for sidebar menu / TabBar
 
         let homeMenuItem = ATCNavigationItem(title: "Home", viewController: homeVC, image: UIImage(named: "shop-menu-icon"))
-        let cardMenuItem = ATCNavigationItem(title: "Shopping Cart", viewController: cartVC, image: UIImage(named: "shopping-cart-menu-item"))
+        let cardMenuItem = ATCNavigationItem(title: "Shopping Cart", viewController: cartViewController, image: UIImage(named: "shopping-cart-menu-item"))
         let settingsMenuItem = ATCNavigationItem(title: "Settings", viewController: settingsVC, image: UIImage(named: "settings-menu-item"))
         let logoutMenuItem = ATCNavigationItem(title: "Logout", viewController: UIViewController(), image: UIImage(named: "logout-menu-item"))
 
         let menuItems = [homeMenuItem, cardMenuItem, settingsMenuItem, logoutMenuItem]
 
-
         // Configure the current user data
         let avatarURL = "https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/12801222_1293104680705553_7502147733893902564_n.jpg?oh=b151770a598fea1b2d6b8f3382d9e7c9&oe=593E48A9"
         let user = ATCUser(firstName: "Florian", lastName: "Marcu", avatarURL: avatarURL)
 
-        let hostViewController = ATCHostViewController(style: .sideBar, items: menuItems, user: user)
+        // Cart button on the top right navigation
+        prepareCartButton()
+        let topRightNavigationViews = [cartButton!]
+        hostViewController = ATCHostViewController(style: .sideBar, items: menuItems, user: user, topNavigationRightViews: topRightNavigationViews)
 
         window = UIWindow(frame: UIScreen.main.bounds)
         window!.rootViewController = hostViewController
@@ -116,6 +122,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     fileprivate func updateCartButton() {
+        cartButton.setTitle("\(cartManager.productCount())", for: .normal)
     }
 
     @objc
@@ -131,14 +138,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.updateCartButton()
     }
 
-//    fileprivate func prepareCartButton() {
-//        cartButton = IconButton(image: UIImage(named: "shopping-cart-menu-item"))
-//        cartButton.tintColor = Color.blue
-//        cartButton.backgroundColor = Color.green.base
-//        cartButton.addTarget(self, action: #selector(handleCartButton), for: .touchUpInside)
-//        cartButton.titleColor = .white
-//        cartButton.layer.cornerRadius = 5
-//    }
+    fileprivate func prepareCartButton() {
+        cartButton = IconButton(image: UIImage(named: "shopping-cart-menu-item"))
+        cartButton.tintColor = Color.blue
+        cartButton.backgroundColor = Color.green.base
+        cartButton.addTarget(self, action: #selector(handleCartButton), for: .touchUpInside)
+        cartButton.titleColor = .white
+        cartButton.layer.cornerRadius = 5
+    }
 
+    @objc
+    fileprivate func handleCartButton() {
+        let cartIndexPath = IndexPath(row: 1, section: 0)
+        hostViewController?.menuViewController?.selectMenuItemAtIndexPath(indexPath: cartIndexPath)
+    }
 }
 
