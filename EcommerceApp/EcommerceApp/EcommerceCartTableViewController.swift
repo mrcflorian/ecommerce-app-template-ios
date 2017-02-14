@@ -12,6 +12,9 @@ class EcommerceCartTableViewController: UITableViewController {
 
     var cartManager: ShoppingCartManager? {
         didSet {
+            NotificationCenter.default.addObserver(self, selector: #selector(didUpdateCart), name: kNotificationDidAddProductToCart, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(didUpdateCart), name: kNotificationDidAClearCart, object: nil)
+
             self.tableView.reloadData()
         }
     }
@@ -60,5 +63,10 @@ class EcommerceCartTableViewController: UITableViewController {
         cell.configureCell(cartManager: cartManager)
         cell.delegate = self
         return cell
+    }
+
+    @objc
+    fileprivate func didUpdateCart(notification: Notification) {
+        tableView.reloadData()
     }
 }

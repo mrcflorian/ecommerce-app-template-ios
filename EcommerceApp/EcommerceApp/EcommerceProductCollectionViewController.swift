@@ -24,7 +24,6 @@ class EcommerceProductCollectionViewController: UICollectionViewController, UICo
         return 1
     }
 
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return products.count
     }
