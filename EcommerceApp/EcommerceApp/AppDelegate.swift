@@ -93,10 +93,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Navigation Item - Configuration for sidebar menu / TabBar
 
-        let homeMenuItem = ATCNavigationItem(title: "Home", viewController: homeVC, image: UIImage(named: "shop-menu-icon"))
-        let cardMenuItem = ATCNavigationItem(title: "Shopping Cart", viewController: cartViewController, image: UIImage(named: "shopping-cart-menu-item"))
-        let settingsMenuItem = ATCNavigationItem(title: "Settings", viewController: settingsVC, image: UIImage(named: "settings-menu-item"))
-        let logoutMenuItem = ATCNavigationItem(title: "Logout", viewController: UIViewController(), image: UIImage(named: "logout-menu-item"))
+        let homeMenuItem = ATCNavigationItem(title: "Home", viewController: homeVC, image: UIImage(named: "shop-menu-icon"), type: .viewController)
+        let cardMenuItem = ATCNavigationItem(title: "Shopping Cart", viewController: cartViewController, image: UIImage(named: "shopping-cart-menu-item"), type: .viewController)
+        let settingsMenuItem = ATCNavigationItem(title: "Settings", viewController: settingsVC, image: UIImage(named: "settings-menu-item"), type: .viewController)
+        let logoutMenuItem = ATCNavigationItem(title: "Logout", viewController: UIViewController(), image: UIImage(named: "logout-menu-item"), type: .logout)
 
         let menuItems = [homeMenuItem, cardMenuItem, settingsMenuItem, logoutMenuItem]
 
