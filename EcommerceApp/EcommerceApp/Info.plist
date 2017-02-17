@@ -23,7 +23,7 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
+	<string>Ecommerce</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -41,5 +41,44 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>Fabric</key>
+    <dict>
+        <key>APIKey</key>
+        <string>7189842e0edc1f648a6e6e3c52978493bb12c759</string>
+        <key>Kits</key>
+        <array>
+            <dict>
+                <key>KitInfo</key>
+                <dict>
+                    <key>consumerKey</key>
+                    <string>9p0SO3sGDAhHu7uz5g9BF9on0</string>
+                    <key>consumerSecret</key>
+                    <string>7ozjHdTpgY3Szejy0R1rYZtFeIjMB50krpbba7b5ShVawlSxeP</string>
+                </dict>
+                <key>KitName</key>
+                <string>Twitter</string>
+            </dict>
+        </array>
+    </dict>
+    <key>FacebookAppID</key>
+    <string>285315185217069</string>
+    <key>FacebookDisplayName</key>
+    <string>iOSAppTemplates</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>fbapi</string>
+        <string>fb-messenger-api</string>
+        <string>fbauth2</string>
+        <string>fbshareextension</string>
+    </array>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fb285315185217069</string>
+            </array>
+        </dict>
+    </array>
 </dict>
 </plist>

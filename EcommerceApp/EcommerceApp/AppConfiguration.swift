@@ -10,7 +10,7 @@ import UIKit
 
 public final class AppConfiguration {
 
-    public static let isLoginScreenEnabled = false
+    public static let isLoginScreenEnabled = true
     public static let isFacebookLoginEnabled = true
     public static let isTwitterLoginEnabled = true
 
