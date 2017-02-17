@@ -107,7 +107,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window = UIWindow(frame: UIScreen.main.bounds)
         if (AppConfiguration.isLoginScreenEnabled) {
-            let loginVC = ATCViewControllerFactory.createLoginViewController(firebaseEnabled: false, loggedInViewController: hostViewController!)
+            let loginVC = ATCViewControllerFactory.createLoginViewController(firebaseEnabled: AppConfiguration.isFirebaseIntegrationEnabled, loggedInViewController: hostViewController!)
             window!.rootViewController = loginVC
         } else {
             // Configure the some mock current user data
