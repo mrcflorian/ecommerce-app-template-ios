@@ -8,11 +8,11 @@
 
 public final class AppConfiguration {
 
-    public static let isLoginScreenEnabled = false
+    public static let isLoginScreenEnabled = true
     public static let isFacebookLoginEnabled = true
     public static let isTwitterLoginEnabled = true
 
-    public static let isFirebaseIntegrationEnabled = true
+    public static let isFirebaseIntegrationEnabled = false
 
     public static let isStripePaymentEnabled = true
     public static let stripePublishableKey = "pk_test_mHeSRjRFtORVXYQeFZty7pZD"
