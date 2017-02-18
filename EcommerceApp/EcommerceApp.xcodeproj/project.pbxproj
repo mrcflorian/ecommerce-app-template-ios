@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		173DCFB01E56B187001092C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 173DCFAF1E56B187001092C7 /* GoogleService-Info.plist */; };
+		173DCFB21E58F599001092C7 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173DCFB11E58F598001092C7 /* CategoriesTableViewController.swift */; };
+		173DCFB41E58F5E4001092C7 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173DCFB31E58F5E4001092C7 /* CategoriesTableViewCell.swift */; };
+		173DCFB61E58F8E2001092C7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173DCFB51E58F8E2001092C7 /* Category.swift */; };
 		1767F7591E344B7100E8AD1F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1767F7581E344B7100E8AD1F /* Product.swift */; };
 		1767F75B1E344E3100E8AD1F /* EcommerceProductCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1767F75A1E344E3100E8AD1F /* EcommerceProductCollectionViewController.swift */; };
 		1767F75D1E344E7800E8AD1F /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1767F75C1E344E7800E8AD1F /* ProductCollectionViewCell.swift */; };
@@ -70,6 +73,9 @@
 
 /* Begin PBXFileReference section */
 		173DCFAF1E56B187001092C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		173DCFB11E58F598001092C7 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
+		173DCFB31E58F5E4001092C7 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
+		173DCFB51E58F8E2001092C7 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		1767F7581E344B7100E8AD1F /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		1767F75A1E344E3100E8AD1F /* EcommerceProductCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcommerceProductCollectionViewController.swift; sourceTree = "<group>"; };
 		1767F75C1E344E7800E8AD1F /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -152,6 +158,7 @@
 				1767F7581E344B7100E8AD1F /* Product.swift */,
 				17825D961E3ABD1300A03FC5 /* ShoppingCart.swift */,
 				17825D981E3ABD3800A03FC5 /* ShoppingCartItem.swift */,
+				173DCFB51E58F8E2001092C7 /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,6 +204,8 @@
 				17825D9E1E3AD50F00A03FC5 /* CartTableViewCell.swift */,
 				17825DA01E3D30BC00A03FC5 /* CartTotalTableViewCell.swift */,
 				17825DA21E3D37A500A03FC5 /* CartPlaceOrderTableViewCell.swift */,
+				173DCFB11E58F598001092C7 /* CategoriesTableViewController.swift */,
+				173DCFB31E58F5E4001092C7 /* CategoriesTableViewCell.swift */,
 			);
 			path = EcommerceApp;
 			sourceTree = "<group>";
@@ -491,6 +500,8 @@
 				17825D901E356ED200A03FC5 /* ImageCollectionViewCell.swift in Sources */,
 				17825DA11E3D30BC00A03FC5 /* CartTotalTableViewCell.swift in Sources */,
 				17825D9F1E3AD50F00A03FC5 /* CartTableViewCell.swift in Sources */,
+				173DCFB61E58F8E2001092C7 /* Category.swift in Sources */,
+				173DCFB21E58F599001092C7 /* CategoriesTableViewController.swift in Sources */,
 				17A2068C1E5147A300CCC2C8 /* ATCNavigationDrawerController.swift in Sources */,
 				17A206791E5147A300CCC2C8 /* ATCUser.swift in Sources */,
 				1767F75D1E344E7800E8AD1F /* ProductCollectionViewCell.swift in Sources */,
@@ -501,6 +512,7 @@
 				17A2067B1E5147A300CCC2C8 /* ATCNetworkingManager.swift in Sources */,
 				17825D8E1E356BF200A03FC5 /* EcommerceProductDetailsViewController.swift in Sources */,
 				17A206811E5147A300CCC2C8 /* ATCLoginViewController.swift in Sources */,
+				173DCFB41E58F5E4001092C7 /* CategoriesTableViewCell.swift in Sources */,
 				17A206701E5147A300CCC2C8 /* ATCFacebookAPIManager.swift in Sources */,
 				17A2068B1E5147A300CCC2C8 /* ATCNavigationController.swift in Sources */,
 				17A206911E5147A300CCC2C8 /* ATCSettingsTextTableViewCell.swift in Sources */,

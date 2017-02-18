@@ -57,10 +57,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     fileprivate func configureHostViewControllers() {
 
-        // Home view controller - the shopping screen
-        let homeVC = StoryboardEntityProvider().ecommerceProductCollectionVC()
-        homeVC.products = Product.mockProducts()
+        // Home view controller - the categories screen
+
+        let homeVC = StoryboardEntityProvider().categoriesVC()
+        homeVC.categories = Category.mockCategories()
         homeVC.title = "Shop"
+        // let homeVC = StoryboardEntityProvider().ecommerceProductCollectionVC()
+        // homeVC.products = Product.mockProducts()
+        // homeVC.title = "Shop"
 
         // Checkout/Cart View Controller - the checkout screen, containing the products in the card
 

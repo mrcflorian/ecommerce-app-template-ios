@@ -29,4 +29,8 @@ class StoryboardEntityProvider {
     func settingsVC() -> UITableViewController {
         return ecommerceStoryboard.instantiateViewController(withIdentifier: "SettingsTableViewController") as! UITableViewController
     }
+
+    func categoriesVC() -> CategoriesTableViewController {
+        return ecommerceStoryboard.instantiateViewController(withIdentifier: "CategoriesTableViewController") as! CategoriesTableViewController
+    }
 }

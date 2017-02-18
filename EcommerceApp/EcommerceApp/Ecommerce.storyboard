@@ -523,5 +523,75 @@
             </objects>
             <point key="canvasLocation" x="3183" y="41"/>
         </scene>
+        <!--Categories Table View Controller-->
+        <scene sceneID="PT5-ZG-7Rz">
+            <objects>
+                <tableViewController storyboardIdentifier="CategoriesTableViewController" id="Du2-Nl-M9U" customClass="CategoriesTableViewController" customModule="EcommerceApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="185" sectionHeaderHeight="28" sectionFooterHeight="28" id="ekR-w1-ZIR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesTableViewCell" rowHeight="185" id="qo8-Wk-keC" customClass="CategoriesTableViewCell" customModule="EcommerceApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="185"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qo8-Wk-keC" id="qrd-8c-bsb">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="184"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lUa-ew-SUw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="184.5"/>
+                                        </imageView>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CqX-Gb-GJ7">
+                                            <rect key="frame" x="0.0" y="136.5" width="375" height="50"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="huk-mv-3TY">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUITS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wng-rJ-N7W">
+                                                        <rect key="frame" x="19" y="14" width="375" height="22"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="wng-rJ-N7W" firstAttribute="width" secondItem="huk-mv-3TY" secondAttribute="width" id="42y-ko-NbY"/>
+                                                    <constraint firstItem="wng-rJ-N7W" firstAttribute="leading" secondItem="huk-mv-3TY" secondAttribute="leading" constant="19" id="5On-uI-Gbg"/>
+                                                    <constraint firstItem="wng-rJ-N7W" firstAttribute="centerY" secondItem="huk-mv-3TY" secondAttribute="centerY" id="QGq-WW-zpg"/>
+                                                </constraints>
+                                            </view>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="0DO-jk-a6p"/>
+                                            </constraints>
+                                            <blurEffect style="light"/>
+                                        </visualEffectView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="lUa-ew-SUw" firstAttribute="centerY" secondItem="qrd-8c-bsb" secondAttribute="centerY" id="0OD-wd-tUK"/>
+                                        <constraint firstItem="CqX-Gb-GJ7" firstAttribute="centerX" secondItem="qrd-8c-bsb" secondAttribute="centerX" id="54o-4h-837"/>
+                                        <constraint firstItem="CqX-Gb-GJ7" firstAttribute="bottom" secondItem="qrd-8c-bsb" secondAttribute="bottomMargin" constant="10" id="7ra-5z-7K4"/>
+                                        <constraint firstItem="lUa-ew-SUw" firstAttribute="width" secondItem="qrd-8c-bsb" secondAttribute="width" id="Rs9-Rd-eAu"/>
+                                        <constraint firstItem="CqX-Gb-GJ7" firstAttribute="width" secondItem="qrd-8c-bsb" secondAttribute="width" id="TC9-3a-PMf"/>
+                                        <constraint firstItem="lUa-ew-SUw" firstAttribute="height" secondItem="qrd-8c-bsb" secondAttribute="height" id="fg3-Lg-hMb"/>
+                                        <constraint firstItem="lUa-ew-SUw" firstAttribute="centerX" secondItem="qrd-8c-bsb" secondAttribute="centerX" id="xrD-O5-9ZR"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="categoryImageView" destination="lUa-ew-SUw" id="RHU-gv-eZ8"/>
+                                    <outlet property="categoryNameLabel" destination="wng-rJ-N7W" id="wdt-3i-856"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Du2-Nl-M9U" id="rzD-6Y-hgY"/>
+                            <outlet property="delegate" destination="Du2-Nl-M9U" id="eaE-JI-Jw9"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KDz-Nv-fai" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3928.8000000000002" y="37.331334332833585"/>
+        </scene>
     </scenes>
 </document>
