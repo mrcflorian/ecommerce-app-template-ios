@@ -46,4 +46,13 @@ class CategoriesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return tableView.bounds.width / 2
     }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let category = categories?[indexPath.row] {
+            let productsVC = StoryboardEntityProvider().ecommerceProductCollectionVC()
+            productsVC.products = Product.mockProducts()
+            productsVC.title = category.name
+            self.navigationController?.pushViewController(productsVC, animated: true)
+        }
+    }
 }
