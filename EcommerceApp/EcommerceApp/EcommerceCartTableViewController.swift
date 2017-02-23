@@ -26,9 +26,16 @@ class EcommerceCartTableViewController: UITableViewController {
 
     func didPlaceOrder() {
         // This is where you need to handle the placing of an order, based on the shopping cart configuration, accessible from cartMananger local var
-        // The current implementation only clears the shopping cart
-        cartManager?.clearProducts()
-        self.tableView.reloadData()
+        // The current implementation opens the Stripe View Controller and clears the products
+        if cartManager?.distinctProductCount() ?? 0 > 0 {
+            guard let price = cartManager?.totalPrice() else { return }
+            let stripeSettingsVC = ATCStripeSettingsViewController()
+            let stripeVC = ATCStripeCheckoutViewController(price: Int(price * 100), settings: stripeSettingsVC.settings)
+            stripeVC.title = "Checkout"
+            self.navigationController?.pushViewController(stripeVC, animated: true)
+            cartManager?.clearProducts()
+            self.tableView.reloadData()
+        }
     }
 
     // MARK: - Table view data source
