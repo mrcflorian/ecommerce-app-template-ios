@@ -1,5 +1,5 @@
 //
-//  EcommerceProductDetailsViewController.swift
+//  ProductDetailsViewController.swift
 //  EcommerceApp
 //
 //  Created by Florian Marcu on 1/22/17.
@@ -11,7 +11,7 @@ import UIKit
 
 private let reuseIdentifier = "ImageCollectionViewCell"
 
-class EcommerceProductDetailsViewController: UIViewController {
+class ProductDetailsViewController: UIViewController {
     var product: Product? {
         didSet {
             self.title = product?.productName
@@ -72,7 +72,7 @@ class EcommerceProductDetailsViewController: UIViewController {
     }
 }
 
-extension EcommerceProductDetailsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension ProductDetailsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }

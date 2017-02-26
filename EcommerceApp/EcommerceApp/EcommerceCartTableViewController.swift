@@ -1,5 +1,5 @@
 //
-//  EcommerceCartTableViewController.swift
+//  CartTableViewController.swift
 //  EcommerceApp
 //
 //  Created by Florian Marcu on 1/26/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EcommerceCartTableViewController: UITableViewController {
+class CartTableViewController: UITableViewController {
 
     var cartManager: ShoppingCartManager? {
         didSet {

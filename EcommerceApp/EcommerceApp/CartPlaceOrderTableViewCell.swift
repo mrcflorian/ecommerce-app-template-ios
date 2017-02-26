@@ -11,7 +11,7 @@ import UIKit
 
 class CartPlaceOrderTableViewCell: UITableViewCell {
 
-    weak var delegate: EcommerceCartTableViewController?
+    weak var delegate: CartTableViewController?
 
     @IBOutlet var placeOrderButton: RaisedButton!
 

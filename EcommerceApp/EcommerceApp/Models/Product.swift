@@ -36,13 +36,13 @@ class Product {
 
         let description = "    To these in the morning, I sent the captain, who was to enter into a parley with them. In a word, to try them and tell me wheather they might be trusted or not to go on board and surprise the ship."
         return [
-            Product(id: "12", name: "Saturn", imageUrl: "https://slimages.macysassets.com/is/image/MCY/products/9/optimized/3079009_fpx.tif?bgc=255,255,255&wid=224&qlt=90,0&layer=comp&op_sharpen=0&resMode=bicub&op_usm=0.7,1.0,0.5,0&fmt=jpeg", price: 45.0, description: description, category: "T-Shirt", images: images),
-            Product(id: "13", name: "V-Neck Pima", imageUrl: "https://slimages.macysassets.com/is/image/MCY/products/4/optimized/3718994_fpx.tif?bgc=255,255,255&wid=224&qlt=90,0&layer=comp&op_sharpen=0&resMode=bicub&op_usm=0.7,1.0,0.5,0&fmt=jpeg", price: 99, description: description, category: "T-Shirt", images: images),
-            Product(id: "14", name: "American Rag", imageUrl: "https://images.lifeisgood.com/Womens-Painted-Dragonfly-Crusher-Tee_48536_1_lg.png", price: 12.0, description: description, category: "T-Shirt", images: images),
-            Product(id: "15", name: "Under Armour", imageUrl: "https://slimages.macysassets.com/is/image/MCY/products/9/optimized/3079039_fpx.tif?bgc=255,255,255&wid=224&qlt=90,0&layer=comp&op_sharpen=0&resMode=bicub&op_usm=0.7,1.0,0.5,0&fmt=jpeg", price: 56, description: description, category: "T-Shirt", images: images),
-            Product(id: "16", name: "Nike Running", imageUrl: "https://slimages.macysassets.com/is/image/MCY/products/8/optimized/3780018_fpx.tif?bgc=255,255,255&wid=224&qlt=90,0&layer=comp&op_sharpen=0&resMode=bicub&op_usm=0.7,1.0,0.5,0&fmt=jpeg", price: 59.0, description: description, category: "T-Shirt", images: images),
-            Product(id: "122", name: "Men's logo", imageUrl: "https://slimages.macysassets.com/is/image/MCY/products/8/optimized/8153318_fpx.tif?bgc=255,255,255&wid=224&qlt=90,0&layer=comp&op_sharpen=0&resMode=bicub&op_usm=0.7,1.0,0.5,0&fmt=jpeg", price: 13.50, description: description, category: "T-Shirt", images: images),
-
+            Product(id: "12", name: "Traveler Traditional", imageUrl: "http://iosapptemplates.com/wp-content/uploads/2017/02/travelertraditionalsuit.jpeg", price: 278.00, description: description, category: "Suits", images: images),
+            Product(id: "13", name: "Ralph Lauren", imageUrl: "http://iosapptemplates.com/wp-content/uploads/2017/02/executivesuits.jpeg", price: 760, description: description, category: "Suits", images: images),
+            Product(id: "14", name: "Hugo Boss", imageUrl: "http://iosapptemplates.com/wp-content/uploads/2017/02/hugobosssuit.jpeg", price: 690, description: description, category: "T-Shirt", images: images),
+            Product(id: "15", name: "Signature Tailor", imageUrl: "http://iosapptemplates.com/wp-content/uploads/2017/02/signaturetailoredsuit.jpg", price: 999, description: description, category: "Suits", images: images),
+            Product(id: "16", name: "Joseph Slim", imageUrl: "http://iosapptemplates.com/wp-content/uploads/2017/02/josephslimsuit.jpeg", price: 459.0, description: description, category: "Suits", images: images),
+            Product(id: "122", name: "Jack Victor", imageUrl: "http://iosapptemplates.com/wp-content/uploads/2017/02/jackvictorgibsonsuit.jpg", price: 360, description: description, category: "Suits", images: images),
+            Product(id: "123", name: "Calvin Klein", imageUrl: "http://iosapptemplates.com/wp-content/uploads/2017/02/calvinkleinsuit.jpg", price: 780, description: description, category: "Suits", images: images)
         ]
     }
 }

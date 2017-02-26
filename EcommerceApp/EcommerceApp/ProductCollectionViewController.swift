@@ -1,5 +1,5 @@
 //
-//  EcommerceProductCollectionViewController.swift
+//  ProductCollectionViewController.swift
 //  EcommerceApp
 //
 //  Created by Florian Marcu on 1/21/17.
@@ -11,7 +11,7 @@ import UIKit
 
 private let reuseIdentifier = "ProductCollectionViewCell"
 
-class EcommerceProductCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class ProductCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     var products: [Product] = [] {
         didSet {
             self.collectionView?.reloadData()
