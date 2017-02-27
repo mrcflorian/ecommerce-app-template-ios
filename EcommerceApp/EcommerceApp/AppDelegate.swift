@@ -128,7 +128,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     fileprivate func updateCartButton() {
-        cartButton.setTitle("\(cartManager.productCount())", for: .normal)
+        let count = cartManager.productCount()
+        var title = ""
+        if count > 0 {
+            title = "\(count)"
+        }
+        cartButton.setTitle(title, for: .normal)
     }
 
     @objc
