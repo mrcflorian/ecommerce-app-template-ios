@@ -1,0 +1,45 @@
+
+/* Class = "UILabel"; text = "T-Shirt"; ObjectID = "74B-sG-AX9"; */
+"74B-sG-AX9.text" = "T-Shirt";
+
+/* Class = "UIButton"; normalTitle = "ADD TO CART"; ObjectID = "EMa-CI-YAO"; */
+"EMa-CI-YAO.normalTitle" = "ADD TO CART";
+
+/* Class = "UILabel"; text = "Product name"; ObjectID = "Li5-Rw-EUY"; */
+"Li5-Rw-EUY.text" = "Product name";
+
+/* Class = "UILabel"; text = "$180"; ObjectID = "PMH-E7-PJd"; */
+"PMH-E7-PJd.text" = "$180";
+
+/* Class = "UILabel"; text = "Skull with snake"; ObjectID = "VDB-7z-u79"; */
+"VDB-7z-u79.text" = "Skull with snake";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "XfW-SB-x6k"; */
+"XfW-SB-x6k.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "Privacy Policy"; ObjectID = "bx9-h2-sJd"; */
+"bx9-h2-sJd.text" = "Privacy Policy";
+
+/* Class = "UILabel"; text = "Push Notifications"; ObjectID = "ecx-i0-ai5"; */
+"ecx-i0-ai5.text" = "Push Notifications";
+
+/* Class = "UILabel"; text = "$45"; ObjectID = "gqa-dJ-YXx"; */
+"gqa-dJ-YXx.text" = "$45";
+
+/* Class = "UILabel"; text = "Email Notifications"; ObjectID = "hYR-aB-4Mv"; */
+"hYR-aB-4Mv.text" = "Email Notifications";
+
+/* Class = "UIButton"; normalTitle = "PLACE ORDER"; ObjectID = "p7Y-l0-WM2"; */
+"p7Y-l0-WM2.normalTitle" = "PLACE ORDER";
+
+/* Class = "UILabel"; text = "$180"; ObjectID = "wUm-QP-xnY"; */
+"wUm-QP-xnY.text" = "$180";
+
+/* Class = "UILabel"; text = "Payment Details"; ObjectID = "weY-KO-j2y"; */
+"weY-KO-j2y.text" = "Payment Details";
+
+/* Class = "UILabel"; text = "SUITS"; ObjectID = "wng-rJ-N7W"; */
+"wng-rJ-N7W.text" = "SUITS";
+
+/* Class = "UILabel"; text = "TOTAL"; ObjectID = "yAr-mL-AYh"; */
+"yAr-mL-AYh.text" = "TOTAL";

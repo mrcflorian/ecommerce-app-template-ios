@@ -1,0 +1,8 @@
+/* 
+  Localizable.strings
+  EcommerceApp
+
+  Created by Florian Marcu on 2/26/17.
+  Copyright © 2017 iOS App Templates. All rights reserved.
+*/
+kHomeString = "Home";

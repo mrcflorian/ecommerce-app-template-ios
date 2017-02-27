@@ -70,7 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let cartViewController = StoryboardEntityProvider().ecommerceCartVC()
         cartViewController.cartManager = cartManager
-        cartViewController.title = "Shopping Cart"
+        cartViewController.title = StringConstants.kShoppingCartString
 
         // Settings view controller - user settings screen
         let action = { (_ viewController: UIViewController?) -> (Void) in
@@ -90,14 +90,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let settingsItem6 = ATCSettingsItem(title: "Terms & Conditions", style: .more, action: action)
         let settingsItems = [settingsItem1, settingsItem2, settingsItem3, settingsItem4, settingsItem5, settingsItem6]
         let settingsVC = ATCSettingsTableViewController(settings: settingsItems, nibNameOrNil: nil, nibBundleOrNil: nil)
-        settingsVC.title = "Settings"
+        settingsVC.title = StringConstants.kSettingsString
 
         // Navigation Item - Configuration for sidebar menu / TabBar
 
-        let homeMenuItem = ATCNavigationItem(title: "Home", viewController: homeVC, image: UIImage(named: "shop-menu-icon"), type: .viewController)
-        let cardMenuItem = ATCNavigationItem(title: "Shopping Cart", viewController: cartViewController, image: UIImage(named: "shopping-cart-menu-item"), type: .viewController)
-        let settingsMenuItem = ATCNavigationItem(title: "Settings", viewController: settingsVC, image: UIImage(named: "settings-menu-item"), type: .viewController)
-        let logoutMenuItem = ATCNavigationItem(title: "Logout", viewController: UIViewController(), image: UIImage(named: "logout-menu-item"), type: .logout)
+        let homeMenuItem = ATCNavigationItem(title: StringConstants.kHomeString, viewController: homeVC, image: UIImage(named: "shop-menu-icon"), type: .viewController)
+        let cardMenuItem = ATCNavigationItem(title: StringConstants.kShoppingCartString, viewController: cartViewController, image: UIImage(named: "shopping-cart-menu-item"), type: .viewController)
+        let settingsMenuItem = ATCNavigationItem(title: StringConstants.kSettingsString, viewController: settingsVC, image: UIImage(named: "settings-menu-item"), type: .viewController)
+        let logoutMenuItem = ATCNavigationItem(title: StringConstants.kLogoutString, viewController: UIViewController(), image: UIImage(named: "logout-menu-item"), type: .logout)
 
         let menuItems = [homeMenuItem, cardMenuItem, settingsMenuItem, logoutMenuItem]
 
