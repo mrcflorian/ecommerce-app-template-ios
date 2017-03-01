@@ -30,6 +30,7 @@
 		1782C86C1E6285D200963945 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1782C86B1E6285D200963945 /* StringConstants.swift */; };
 		1782C86D1E6287A500963945 /* Ecommerce.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1782C86F1E6287A500963945 /* Ecommerce.storyboard */; };
 		1782C8791E63E15600963945 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1782C87B1E63E15600963945 /* Localizable.strings */; };
+		1782C8801E6683D000963945 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1782C87F1E6683D000963945 /* UIView.swift */; };
 		17A206351E513D7C00CCC2C8 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A206341E513D7C00CCC2C8 /* AppConfiguration.swift */; };
 		17A2066F1E5147A300CCC2C8 /* ATCAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A206401E5147A300CCC2C8 /* ATCAPIManager.swift */; };
 		17A206701E5147A300CCC2C8 /* ATCFacebookAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A206411E5147A300CCC2C8 /* ATCFacebookAPIManager.swift */; };
@@ -61,7 +62,6 @@
 		17A2068A1E5147A300CCC2C8 /* ATCMenuTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17A206631E5147A300CCC2C8 /* ATCMenuTableViewController.xib */; };
 		17A2068B1E5147A300CCC2C8 /* ATCNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A206641E5147A300CCC2C8 /* ATCNavigationController.swift */; };
 		17A2068C1E5147A300CCC2C8 /* ATCNavigationDrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A206651E5147A300CCC2C8 /* ATCNavigationDrawerController.swift */; };
-		17A2068D1E5147A300CCC2C8 /* ATCNavigationToolbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A206661E5147A300CCC2C8 /* ATCNavigationToolbarController.swift */; };
 		17A2068E1E5147A300CCC2C8 /* ATCSettingsMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A206681E5147A300CCC2C8 /* ATCSettingsMoreTableViewCell.swift */; };
 		17A2068F1E5147A300CCC2C8 /* ATCSettingsMoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17A206691E5147A300CCC2C8 /* ATCSettingsMoreTableViewCell.xib */; };
 		17A206901E5147A300CCC2C8 /* ATCSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2066A1E5147A300CCC2C8 /* ATCSettingsTableViewController.swift */; };
@@ -102,6 +102,7 @@
 		1782C8761E63E04A00963945 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Ecommerce.strings; sourceTree = "<group>"; };
 		1782C87A1E63E15600963945 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1782C87D1E63E16B00963945 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1782C87F1E6683D000963945 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = Views/UIView.swift; sourceTree = "<group>"; };
 		17A206341E513D7C00CCC2C8 /* AppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		17A206401E5147A300CCC2C8 /* ATCAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATCAPIManager.swift; sourceTree = "<group>"; };
 		17A206411E5147A300CCC2C8 /* ATCFacebookAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATCFacebookAPIManager.swift; sourceTree = "<group>"; };
@@ -133,7 +134,6 @@
 		17A206631E5147A300CCC2C8 /* ATCMenuTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATCMenuTableViewController.xib; sourceTree = "<group>"; };
 		17A206641E5147A300CCC2C8 /* ATCNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATCNavigationController.swift; sourceTree = "<group>"; };
 		17A206651E5147A300CCC2C8 /* ATCNavigationDrawerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATCNavigationDrawerController.swift; sourceTree = "<group>"; };
-		17A206661E5147A300CCC2C8 /* ATCNavigationToolbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATCNavigationToolbarController.swift; sourceTree = "<group>"; };
 		17A206681E5147A300CCC2C8 /* ATCSettingsMoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATCSettingsMoreTableViewCell.swift; sourceTree = "<group>"; };
 		17A206691E5147A300CCC2C8 /* ATCSettingsMoreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATCSettingsMoreTableViewCell.xib; sourceTree = "<group>"; };
 		17A2066A1E5147A300CCC2C8 /* ATCSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATCSettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -265,6 +265,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1782C87E1E66839E00963945 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1782C87F1E6683D000963945 /* UIView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		17A2063E1E5147A300CCC2C8 /* AppTemplatesCore */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +283,7 @@
 				17A206481E5147A300CCC2C8 /* Models */,
 				17A206501E5147A300CCC2C8 /* Networking */,
 				17A206521E5147A300CCC2C8 /* Stripe */,
+				1782C87E1E66839E00963945 /* Views */,
 				17A206581E5147A300CCC2C8 /* ViewControllers */,
 			);
 			name = AppTemplatesCore;
@@ -372,7 +381,6 @@
 				17A206631E5147A300CCC2C8 /* ATCMenuTableViewController.xib */,
 				17A206641E5147A300CCC2C8 /* ATCNavigationController.swift */,
 				17A206651E5147A300CCC2C8 /* ATCNavigationDrawerController.swift */,
-				17A206661E5147A300CCC2C8 /* ATCNavigationToolbarController.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -545,6 +553,7 @@
 				17825D991E3ABD3800A03FC5 /* ShoppingCartItem.swift in Sources */,
 				17A2067D1E5147A300CCC2C8 /* ATCStripeCheckoutRowView.swift in Sources */,
 				17A206771E5147A300CCC2C8 /* ATCRSSFeed.swift in Sources */,
+				1782C8801E6683D000963945 /* UIView.swift in Sources */,
 				17825D901E356ED200A03FC5 /* ImageCollectionViewCell.swift in Sources */,
 				17825DA11E3D30BC00A03FC5 /* CartTotalTableViewCell.swift in Sources */,
 				17825D9F1E3AD50F00A03FC5 /* CartTableViewCell.swift in Sources */,
@@ -573,7 +582,6 @@
 				1767F75B1E344E3100E8AD1F /* ProductCollectionViewController.swift in Sources */,
 				17A206851E5147A300CCC2C8 /* ATCMenuHeaderTableViewCell.swift in Sources */,
 				17A206871E5147A300CCC2C8 /* ATCMenuTableViewCell.swift in Sources */,
-				17A2068D1E5147A300CCC2C8 /* ATCNavigationToolbarController.swift in Sources */,
 				177867461E33F86000BF7080 /* AppDelegate.swift in Sources */,
 				17A2067E1E5147A300CCC2C8 /* ATCStripeCheckoutViewController.swift in Sources */,
 				17A2067F1E5147A300CCC2C8 /* ATCStripeMyAPIClient.swift in Sources */,
