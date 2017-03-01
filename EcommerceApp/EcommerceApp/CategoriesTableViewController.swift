@@ -50,7 +50,7 @@ class CategoriesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let category = categories?[indexPath.row] {
             let productsVC = StoryboardEntityProvider().ecommerceProductCollectionVC()
-            productsVC.products = Product.mockProducts()
+            productsVC.products = Product.mockProducts().filter({category.name?.lowercased() == $0.productCategory?.lowercased()})
             productsVC.title = category.name
             self.navigationController?.pushViewController(productsVC, animated: true)
         }
